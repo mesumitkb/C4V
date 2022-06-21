@@ -1,0 +1,328 @@
+.mainslider{
+    margin: 0px;
+    padding: 1em;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sliderr{
+width: 96%;
+height: 700px;
+border-radius: 10px;
+overflow: hidden;
+}
+.slidee{
+width: 500%;
+height: 500px;
+display: flex;  
+}
+.slidee input{
+    display: none;
+}
+.slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    width: 20%;
+    transition: 2s;
+}
+.slide p{
+    width: 41%;
+    font-size: 20px;
+    padding-right: 1.5%;
+    text-align: justify;
+}
+.slide button{
+    background-color: #D90E18;
+    width: 130px;
+}
+.slide img{
+    width: 50%;
+    /* height: 65%; */
+    border-radius: 10px;
+}
+.navigation-manual{
+    position: absolute;
+    width: 100%;
+    margin-top: 90px;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;    
+}
+.manual-btn{
+    border: 2px solid #D90E18;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+
+}
+.manual-btn:not(:last-child){
+margin-right:40px;
+}
+.manual-btn:hover{
+background: #D90E18;
+}
+#radio1:checked ~ .first{
+margin-left: 0;
+}
+#radio2:checked ~ .first{
+margin-left: -20%;
+}
+#radio3:checked ~ .first{
+margin-left: -40%;
+}
+#radio4:checked ~ .first{
+margin-left: -60%;
+}
+.navigation-auto{
+position: absolute;
+display: flex;
+width: 100%;
+overflow: hidden;
+justify-content: center;
+margin-top: 590px;
+margin-right: 0px;
+}
+.navigation-auto div{
+    border: 2px solid #D90E18;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+.radio1 :checked ~ .navigation-auto .auto-btn1{
+    background: #D90E18;
+}
+.radio2 :checked ~ .navigation-auto .auto-btn2{
+    background: #D90E18;
+
+}
+.radio3 :checked ~ .navigation-auto .auto-btn3{
+    background: #D90E18;
+
+}
+.radio4 :checked ~ .navigation-auto .auto-btn4{
+    background: #D90E18;
+
+}
+@font-face {
+    font-family: "GlacialIndifference-Regular";
+    src: url('../../fonts/GlacialIndifference-Regular.otf');
+}
+
+.container {
+                position: relative;
+                width: 100%;
+                height: 100%;
+}
+
+.bgv-btn {
+    font-family: 'GlacialIndifference-Regular';
+    z-index: 1;
+    position: absolute;
+    bottom: 6em;
+    left: 45%;
+    color: black;
+    border-width: 0px;
+    font-size: 16px;
+    line-height: 43px;
+    height: 43px;
+    font-style: normal;
+    font-weight: bolder;
+    padding-left: 26px;
+    padding-right: 26px;
+    border-radius: 80px;
+    background-color: white;
+}
+
+
+
+.overlay {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                transition: .5s ease;
+                background-color: rgba(17, 17, 17, 0.707);
+                border-radius: 18px 18px 0px 0px;
+            }
+            
+.container:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* Fixed sidenav, full height */
+
+.sidenav {
+    background-color: #81818184;
+    height: 100%;
+    width: 100px;
+    position: fixed;
+    z-index: 1;
+    background-color: #111;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    padding-top: 200px;
+}
+
+/* Style the sidenav links and the dropdown button */
+
+.sidenav a,
+.dropdown-btn {
+   
+    padding: 23px 0px 30px 15px;
+    text-decoration: none;
+    font-size: 30px;
+    color: #818181;
+    display: inline-block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+
+/* On mouse-over */
+
+.sidenav a:hover,
+.dropdown-btn:hover {
+    color: #ff0000;
+}
+
+.side2 {
+    color: #fff !important;
+    font-weight: 400;
+    text-decoration: capitalize;
+    display: inline-block;
+    position: relative;
+    line-height: 40px;
+    padding: 0;
+    margin: 0;
+    cursor: pointer
+}
+
+.side {
+    padding: 100px;
+}
+
+/* Main content */
+
+.main {
+   
+    margin-left: 200px;
+    /* Same as the width of the sidenav */
+    font-size: 20px;
+    /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+
+.active {
+    color: #ff0000;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+
+.dropdown-container {
+    display: none;
+    padding-left: 60px;
+}
+
+.side1:hover .dropdown-container {
+    display: block;
+}
+
+dropdown-btn .side1:hover .dropdown-container {
+    display: block;
+}
+
+/* Optional: Style the caret down icon */
+
+.fa-caret-down {
+    padding-right: 8px;
+}
+
+.container {
+    position: relative;
+}
+
+#h1 {
+    color: white;
+}
+
+/* Bottom right text */
+
+.text-block {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.sidenav {
+    
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0);
+    transition: 0.5s;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.back {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.2;
+    overflow-y: hidden;
+    transition: 0.5s;
+    padding-top: 0px;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 8%;
+    left: 86%;
+    font-size: 65px;
+    margin-left: 50px;
+}
+
+.sidenav a {
+    font-size: 22px;
+}

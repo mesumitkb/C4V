@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>C4V</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="wp-content/cache/minify/4ad3e.css" media="all" />
+    <script src="wp-content/cache/minify/98076.js"></script>
+    <link rel="stylesheet" href="wp-content/cache/minify/b9abc.css" media="all" />
+    <script src="https://kit.fontawesome.com/8014d266b1.js" crossorigin="anonymous"></script>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet"> --> 
+    <link rel="stylesheet" href="wp-content/cache/minify/style.css">
+   <script src="wp-content/cache/minify/jquery.gmap.min.js"></script>
+    <!-- <link href="https://www.1001fonts.com/glacial-indifference-font.html?size=36" rel="stylesheet">
+    <link href="https://c4v.website.appneural.net/wp-content/fonts/glacial-indifference/GlacialIndifference-Regular.otf">
+    <link rel="stylesheet" href="wp-content/fonts/GlacialIndifference-Regular.otf"> -->
+    <link rel="stylesheet" href="wp-content/fonts/GlacialIndifference-Regular.otf">
+    <link rel="stylesheet" href="/style/style.css" >
+    <script>
+        function initMap() {
+                var uluru = {lat: 42.0943526, lng: -75.9597858};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 16,
+                    mapTypeId: 'satellite',
+                    center: uluru
+                });
+                var marker = new google.maps.Marker({
+                    position: uluru,
+                    map: map
+                });
+            }
+    </script>
+     <style>
+        
+        
+        .contact-wrapper {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          margin: 0 auto;
+          padding: 5em;
+          position: relative;
+         
+        }
+        .bttn{
+            padding: 4em 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        /* Left contact page */
+        
+        /* Begin Right Contact Page */
+        .direct-contact-container {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        padding: 40px 20px 20px 20px;
+        }
+        
+        /* Location, Phone, Email Section */
+        .contact-list {
+          list-style-type: none;
+           /* margin-left: 80px;
+          padding-right: 40px;  */
+           
+        } 
+        
+        .list-item {
+          line-height: 4;
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 2em;
+        }
+        
+        
+        .place {
+        margin-left: 2em;
+          word-wrap:normal;
+        }
+        
+        .phone {
+            float: right;
+        }
+        
+        .gmail {
+            float: right;
+        }
+        
+        .contact-text a {
+          color: #bbb;
+          text-decoration: none;
+          transition-duration: 0.2s;
+        }
+        
+        .contact-text a:hover {
+          color: #fff;
+          text-decoration: none;
+        } 
+        
+        
+        /* Social Media Icons */
+        .social-media-list {
+          position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          text-align: center;
+          width: 100%;
+          padding: 2em 0;
+         /* padding: 0; */
+        }
+        
+        .social-media-list li a {
+          color: #fff;
+        }
+        
+        .social-media-list li {
+          list-style: none;
+          
+          padding:1.5em;
+          font-size:22px;
+          /* line-height: 60px; */
+          border-radius: 50%;
+          color: #fff;
+          background-color: rgb(27,27,27);
+          cursor: pointer; 
+          transition: all .2s ease-in-out;
+        }
+        
+        .social-media-list li:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          /* width: 60px;
+          height: 60px; */
+          /* line-height: 60px; */
+          border-radius: 50%;
+          opacity: 0;
+          box-shadow: 0 0 0 1px #fff;
+          transition: all .2s ease-in-out;
+        }
+        
+        .social-media-list li:hover {
+          background-color: #000; 
+        }
+        
+        .social-media-list li:hover:after {
+          opacity: 1;  
+          transform: scale(1.12);
+          transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
+        }
+        
+        .social-media-list li:hover a {
+          color: #fff;
+        }
+        
+        
+        
+        hr {
+          border-color: rgba(255,255,255,.6);
+        }
+        
+        /* Begin Media Queries*/
+        @media screen and (max-width: 850px) {
+          .contact-wrapper {
+            display: flex;
+            flex-direction: column;
+            padding: 3em 1.5em;
+          }
+          .contact-s-media{
+              padding: 3em 1.5em;
+          }
+          .direct-contact-container, .form-horizontal {
+            margin: 0 auto;
+          }  }
+                     
+        </style>
+                   
+    <style>
+        /* Set the size of the div element that contains the map */
+    #map {
+        margin-top: 5em;
+        
+      height: 440px;
+      /* The height is 400 pixels */
+      width: 600px;
+      /* The width is the width of the web page */
+    }
+    </style>
+   <style>
+        .parallax-wrapper {
+            overflow-y: hidden;
+        }
+
+        .parallax {
+            background-image: url("https://placeimg.com/1000/400/tech");
+            background-size: cover;
+            background-position: center;
+            height: 350px;
+        }
+
+        .parallax {
+            padding-left: 5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+            color: white;
+        }
+
+        .sb-headig {
+            width: 90%;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+    <style>
+      
+/* 
+        #bg-video {
+            min-width: 100%;
+            min-height: 100vh;
+            max-width: 100%;
+            max-height: 100vh;
+            object-fit: cover;
+            z-index: -1;
+        } */
+
+
+        /*=== Trigger  ===*/
+
+        .animate {
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+        /*=== Optional Delays, change values here  ===*/
+
+        .one {
+            -webkit-animation-delay: 0.5s;
+            -moz-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+        }
+
+        .two {
+            -webkit-animation-delay: 1.5s;
+            -moz-animation-delay: 1.5s;
+            animation-delay: 1.5s;
+        }
+
+        .three {
+            -webkit-animation-delay: 2.5s;
+            -moz-animation-delay: 2.5s;
+            animation-delay: 2.5s;
+        }
+
+        .four {
+            -webkit-animation-delay: 3.5s;
+            -moz-animation-delay: 3.5s;
+            animation-delay: 3.5s;
+        }
+
+        .five {
+            -webkit-animation-delay: 4.5s;
+            -moz-animation-delay: 4.5s;
+            animation-delay: 4.5s;
+        }
+
+        .six {
+            -webkit-animation-delay: 5.5s;
+            -moz-animation-delay: 5.5s;
+            animation-delay: 5.5s;
+        }
+
+        .seven {
+            -webkit-animation-delay: 6.5s;
+            -moz-animation-delay: 6.5s;
+            animation-delay: 6.5s;
+        }
+
+        .eight {
+            -webkit-animation-delay: 7.5s;
+            -moz-animation-delay: 7.5s;
+            animation-delay: 7.5s;
+        }
+
+        /*=== Animations start here  ===*/
+        /*==== FADE IN UP ===*/
+
+        @-webkit-keyframes fadeInUp {
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(0, 100%, 0);
+                transform: translate3d(0, 100%, 0);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(0, 100%, 0);
+                transform: translate3d(0, 100%, 0);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        .fadeInUp {
+            -webkit-animation-name: fadeInUp;
+            animation-name: fadeInUp;
+        }
+
+        /*=== FADE IN DOWN ===*/
+
+        .fadeInDown {
+            -webkit-animation-name: fadeInDown;
+            animation-name: fadeInDown;
+        }
+
+        @-webkit-keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(0, -100%, 0);
+                transform: translate3d(0, -100%, 0);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(0, -100%, 0);
+                transform: translate3d(0, -100%, 0);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        /*=== FADE IN LEFT ===*/
+
+        @-webkit-keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(-100%, 0, 0);
+                transform: translate3d(-100%, 0, 0);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(-100%, 0, 0);
+                transform: translate3d(-100%, 0, 0);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        .fadeInLeft {
+            -webkit-animation-name: fadeInLeft;
+            animation-name: fadeInLeft;
+        }
+
+        /*==== FADE IN RIGHT ===*/
+
+        @-webkit-keyframes fadeInRight {
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(100%, 0, 0);
+                transform: translate3d(100%, 0, 0);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(100%, 0, 0);
+                transform: translate3d(100%, 0, 0);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        .fadeInRight {
+            -webkit-animation-name: fadeInRight;
+            animation-name: fadeInRight;
+        }
+
+        /*=== FADE IN  ===*/
+
+        @-webkit-keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fadeIn {
+            -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+        }
+
+        /*=== FADE IN UP Big ===*/
+
+        .fadeInUpBig {
+            -webkit-animation-name: fadeInUpBig;
+            animation-name: fadeInUpBig;
+        }
+
+        @-webkit-keyframes fadeInUpBig {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(0, 2000px, 0);
+                transform: translate3d(0, 2000px, 0);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        @keyframes fadeInUpBig {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(0, 2000px, 0);
+                transform: translate3d(0, 2000px, 0);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        /*=== FADE IN DOWN Big ===*/
+
+        .fadeInDownBig {
+            -webkit-animation-name: fadeInDownBig;
+            animation-name: fadeInDownBig;
+        }
+
+        @-webkit-keyframes fadeInDownBig {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(0, -2000px, 0);
+                transform: translate3d(0, -2000px, 0);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        @keyframes fadeInDownBig {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(0, -2000px, 0);
+                transform: translate3d(0, -2000px, 0);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        /*=== FADE IN LEFT Big ===*/
+
+        .fadeInLeftBig {
+            -webkit-animation-name: fadeInLeftBig;
+            animation-name: fadeInLeftBig;
+        }
+
+        @-webkit-keyframes fadeInLeftBig {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(-2000px, 0, 0);
+                transform: translate3d(-2000px, 0, 0);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        @keyframes fadeInLeftBig {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(-2000px, 0, 0);
+                transform: translate3d(-2000px, 0, 0);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        /*=== FADE IN RIGHT Big ===*/
+
+        .fadeInRightBig {
+            -webkit-animation-name: fadeInRightBig;
+            animation-name: fadeInRightBig;
+        }
+
+        @-webkit-keyframes fadeInRightBig {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(2000px, 0, 0);
+                transform: translate3d(2000px, 0, 0);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        @keyframes fadeInRightBig {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(2000px, 0, 0);
+                transform: translate3d(2000px, 0, 0);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        .comman {
+            background-color: black;
+            color: white;
+            border-bottom: 1px solid red;
+            border-top-style: hidden;
+            border-right-style: hidden;
+            border-left-style: hidden;
+            margin-top: 5%;
+            font-family: 'GlacialIndifference-Regular';
+        }
+
+        .comman::placeholder {
+            color: #d5d8dc;
+
+        }
+
+        #myImg {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      
+      #myImg:hover {opacity: 0.7;}
+      
+      /* The Modal (background) */
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 9999999; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+      }
+      
+      /* Modal Content (image) */
+      .modal-content {
+        z-index: 99999;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        position: absolute;
+        top: 30%;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+      }
+      
+      /* Caption of Modal Image */
+      #caption {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+        height: 150px;
+      }
+      
+      /* Add Animation */
+      .modal-content, #caption {  
+        -webkit-animation-name: zoom;
+        -webkit-animation-duration: 0.6s;
+        animation-name: zoom;
+        animation-duration: 0.6s;
+      }
+      
+      @-webkit-keyframes zoom {
+        from {-webkit-transform:scale(0)} 
+        to {-webkit-transform:scale(1)}
+      }
+      
+      @keyframes zoom {
+        from {transform:scale(0)} 
+        to {transform:scale(1)}
+      }
+      
+      /* The Close Button */
+      .close {
+        position: absolute;
+        top: 20%;
+        right: 20%;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      
+      .close:hover,
+      .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      
+      /* 100% Image Width on Smaller Screens */
+      @media only screen and (max-width: 700px){
+        .modal-content {
+          width: 100%;
+        }
+        .close {
+        position: absolute;
+        top: 25%;
+        right: 2%;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      }
+    </style>
+</head>
+
+<body onscroll="scrollFunction()"
+    class="home page-template page-template-full_width page-template-full_width-php page page-id-6057 mkd-core-1.0 ajax_fade page_not_loaded  C4V-ver-1.0  vertical_menu_with_scroll smooth_scroll woocommerce_installed blog_installed wpb-js-composer js-comp-ver-6.0.5 vc_responsive">
+
+    <div class="wrapper">
+        <div class="wrapper_inner">
+            <div class="topnav" id="myTopnav">
+                <div class="nav-wrapper">
+                <div class="logo-sec">
+                    <a href="/" class="active" style="height: 83px;">
+                    <img class="normal companylogo" src="logo.png" alt="Logo" style="height: 100%;">
+                    </a>
+                </div>
+                
+                <div class="nav-wrapper-list">
+                <ul class="nav-list">
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Home</button>
+                            <div class="dropdown-content">
+                                <a href="Electrification.html">Electrification</a>
+                                <a href="energy.html">Energy Storage</a>
+                                <a href="liion.html">Li-ion Batteries</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Technology</button>
+                            <div class="dropdown-content">
+                                <a href="innovation.html">Innovation</a>
+                                <a href="portfolio.html">IP Portfolio</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Partnerships</button>
+                            <div class="dropdown-content">
+                                <a href="Giga.html">Gigafactory</a>
+                                <a href="offtake.html">Offtake</a>
+                                <a href="Development.html">Development</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                    
+                </ul>
+                
+                <ul style="list-style: none">
+                <li id="nav-menu-item-10090 " class="menu-item menu-item-type-post_type menu-item-object-page narrow ">
+                                                <a href="# " onclick="openNav(); " class="up right" style="line-height: 83px;"><span class="item_inner "><span class="menu_icon_wrapper "><i class="menu_icon null fa " aria-hidden="true"></i></span><span class="item_text ">☰</span></span><span class="plus "></span></a>
+                                            </li>
+                                            <li>
+                                                <div id="mySidenav " class="sidenav " style="margin-bottom: 200px; ">
+                                                    <span href="javascript:void(0) " class="closebtn up right" onclick="closeNav() ">×</span>
+                                                    <div class="m-nav-list" style="font-size: 50px ;height: 300px ; width: 360px; margin-right: 100px;margin-left: 250px; justify-self: center; margin-top: -6%; ">
+                                                        <div class="side1 ">
+                                                            <span class="up right" style="margin-left: 0.8em"> <button class="dropdown-btn ">Home
+                                                            <i class="fa fa-caret-down " aria-hidden="true"></i>
+                                                        </button></span>
+                                                            <div class="dropdown-container side2 ">
+                                                                <a href="Electrification.html" class="up right">Electrification</a>
+                                                                <a href="Engry.html" class="up right">Energy Storage</a>
+                                                                <a href="liion.html" class="up right">Li-ion Batteries</a>
+        
+                                                            </div>
+                                                        </div>
+                                                        <div class="side1 ">
+                                                            <a href="#" class="up right"><button class="dropdown-btn ">Solutions
+                                                                <i class="fa fa-caret-down " aria-hidden="true"></i>
+                                                            </button></a>
+                                                            <div class="dropdown-container side2 ">
+                                                                <a href="Elec.html" class="up right">Electric Mobility </a>
+                                                                <a href="Avia.html" class="up right">Aviation</a>
+                                                                <a href="Grid.html" class="up right">Grid Storage</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="side1 ">
+                                                            <a href="#" class="up right"><button class="dropdown-btn "> Partnerships
+                                                                <i class="fa fa-caret-down " aria-hidden="true"></i>
+                                                            </button></a>
+                                                            <div class="dropdown-container side2 ">
+                                                                <a href="Giga.html" class="up right">Gigafactory</a>
+                                                                <a href="offtake.html" class="up right">Offtake</a>
+                                      <a href="Development.html" class="up right">Development</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="m-nav-list" style=" height: 300px; width: 500px;margin-top: -6%; ">
+                                                        <div class="side1 ">
+                                                            <a href="#" class="up right"><button class="dropdown-btn ">Technology
+                                                                <i class="fa fa-caret-down " aria-hidden="true"></i>
+                                                            </button></a>
+                                                            <div class="dropdown-container side2 ">
+                                                                <a href="innovation.html" class="up right">Innovation</a>
+                                                                <a href="portfolio.html" class="up right">IP Portfolio </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="side1 ">
+                                                            <a href="#" class="up right"><button class="dropdown-btn ">Media
+                                                                <i class="fa fa-caret-down " aria-hidden="true"></i>
+                                                            </button></a>
+                                                            <div class="dropdown-container side2 ">
+                                                                <a href="social.html" class="up right">Social Media</a>
+                                                                <a href="blog.html" class="up right">Blog</a>
+                                                                <a href="press.html" class="up right">Press Releases </a>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <!-- <a href="team.html" class="up right"><button class="dropdown-btn ">Team
+                                                        </button></a> -->
+                                                        <div class="side1 ">
+                                                            <a href="#" class="up right"><button class="dropdown-btn ">Team
+                                                                <i class="fa fa-caret-down " aria-hidden="true"></i>
+                                                            </button></a>
+                                                            <div class="dropdown-container side2 ">
+                                                                <a href="about.html" class="up right">About us</a>
+                                                                <a href="join.html" class="up right">Join us</a>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                        <a href="contact.html" class="up right"><button class="dropdown-btn ">Contact
+                                                        </button></a>
+                                                    </div>
+                                                </div>
+                                                <span class="mobile_arrow "></span>
+                                            </li>
+                                            </ul>
+                                            </div>
+                </div>
+            </div>
+
+            
+            <script>
+                function openNav() {
+                    document.getElementById("mySidenav ").style.width = "100vw";
+                    document.getElementById("background ").style.height = "50% ";
+                }
+        
+                function closeNav() {
+                    document.getElementById("mySidenav ").style.width = "0 ";
+                    document.getElementById("background ").style.height = "0% ";
+                }
+        
+                window.onscroll = function() {
+                    scrollFunction();
+                };
+        
+                function scrollFunction() {
+                    console.log(document.documentElement.scrollTop)
+                    var images = document.getElementsByClassName("companylogo ");
+                    console.log(images)
+        
+                    for (let i = 0; i < images.length; i++) {
+                        if (document.documentElement.scrollTop > 150)
+                            images[i].src =
+                            "logo1.png ";
+        
+        
+                        else
+                            images[i].src =
+                            "logo.png ";
+        
+                    }
+                }
+            </script>
+        
+        
+            <a id='back_to_top' class="" href='index.html#'>
+                <span class="mkd_icon_stack">
+                    <i class="fas fa-arrow-circle-up"></i>
+                </span>
+            </a>
+            <div class="content ">
+                
+                <div class="content_inner  ">
+                    <script data-cfasync="false"
+                        src="https://c4v.website.appneural.net/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+                    <script>
+                        page_scroll_amount_for_sticky = undefined
+                    </script>
+                    
+                    <div class="map-sec" style="margin-top: 100px">
+                        <div class="wrap-sec">
+                        <section id="contact">
+  
+                      
+                        
+                        <div class="contact-wrapper">
+                        
+                          
+                          
+                            <div class="direct-contact-container">
+                      
+                              <ul class="contact-list">
+                                <li class="list-item"><h5><span><i class="fa fa-map-pin"></i></span>&nbsp;&nbsp;&nbsp;<span>Address</span></h5><h5 class="contact-text place">Charge CCCV (C4V), 2226 Center of Excellence,<br> SUNY Binghamton, Binghamton NY 13902</li>
+                                <li class="list-item"><h5><span><i class="fa fa-phone"></i></span>&nbsp;&nbsp;&nbsp;<span>Phone</span></h5><h5 class="contact-text place">+1-607-224-2225</h5></i></li>
+                                <li class="list-item"><h5><span><i class="fa fa-envelope"></i></span>&nbsp;&nbsp;&nbsp;<span>Email</span></h5><h5 class="contact-text place">support@c4v.us</h5></i></li>                       
+                              </ul>
+                              <div class="bttn">
+                       <p> <!-- Left contact page --> 
+                        <span id="#parkingModal" href="Parking details.jpg" onclick="parking()" target="_self" data-hover-animated-background-color="#D90E18"
+                        data-hover-border-color="#D90E18" data-hover-color="#ffffff"
+                        class="qbutton  fill_from_bottom icon_right"
+                        style="color: rgb(71, 76, 78); border-color: rgb(199, 201, 202); border-width: 1px; font-size: 13px; line-height: 53px; height: 53px; font-style: normal; font-weight: 900; border-radius: 0px; background-color: rgb(255, 255, 255);"><span
+                            class="text_wrap" data-text="Explore now" ><i class="fa fa-car fa-lg"></i> Parking
+                            </span><span class="a_overlay"
+                            style="border-radius: 0px; background-color: rgb(71, 76, 78);"></span></span>
+                 &nbsp;&nbsp;
+                <span id="#flyin" href="flyin.jpeg" onclick="flyin()" target="_self" data-hover-animated-background-color="#D90E18"
+                data-hover-border-color="#D90E18" data-hover-color="#ffffff"
+                class="qbutton  fill_from_bottom icon_right"
+                style="color: rgb(71, 76, 78); border-color: rgb(199, 201, 202); border-width: 1px; font-size: 13px; line-height: 53px; height: 53px; font-style: normal; font-weight: 900; border-radius: 0px; background-color: rgb(255, 255, 255);"><span
+                    class="text_wrap" data-text="Explore now" ><i class="fa fa-plane fa-lg"></i> Fly-in
+                    </span><span class="a_overlay"
+                    style="border-radius: 0px; background-color: rgb(71, 76, 78);"></span></span>
+        </p>
+       
+    </div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close" onclick="parkingClose()">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+                            </div>
+                          
+                        </div>
+                        
+                      </section> 
+                    </div>
+
+                    
+                    <div class="wrap-sec">
+                        <div class="contact-s-media">
+                            <h2 style="margin-top: 1em">Do check out us on <br> Social Media</h2>
+                        <ul class="social-media-list">
+                                <li><a href="#" target="_blank" class="contact-icon">
+                                  <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                </li>
+                                <li><a href="#" target="_blank" class="contact-icon">
+                                  <i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                </li>
+                                <li><a href="#" target="_blank" class="contact-icon">
+                                  <i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                </li>
+                                <li><a href="#" target="_blank" class="contact-icon">
+                                  <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                </li>       
+                              </ul>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="map-sec-wrap">
+                        <div id="map"></div>
+                    </div>
+                    
+                    
+
+                    <!-- 
+                     The `defer` attribute causes the callback to execute after the full HTML
+                     document has been parsed. For non-blocking uses, avoiding race conditions,
+                     and consistent behavior across browsers, consider loading using Promises
+                     with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+                    -->
+                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvJqrfWyHFJvXJlG8ar5x-5-zA3sp8NAE&callback=initMap"
+        async defer></script>
+         
+    <div class="vc_row wpb_row section grid_section"
+        style="background-color: #111; padding-top:43px; padding-bottom:43px; text-align:center;">
+        <div class=" section_inner clearfix">
+            <div class='section_inner_margin clearfix'>
+                <div class="wpb_column vc_column_container vc_col-sm-12">
+                    <div class="vc_column-inner">
+                        <div class="wpb_wrapper">
+                            <div class="wpb_text_column wpb_content_element ">
+                                <div class="wpb_wrapper">
+                                    <h5><span style="color: #ffffff;">C4V: Charging Ahead!
+                                        </span></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="">
+        <div class="footer_inner clearfix">
+            <div class="footer_top_holder">
+                <div class="footer_top footer_top_full">
+                    <div class="four_columns clearfix">
+
+                        <div class="mkd_column column1">
+                            <div class="column_inner">
+                                <div id="text-3" class="widget widget_text">
+                                    <div class="textwidget">
+                                        <div class="separator  transparent center  "
+                                            style="margin-top:14px;margin-bottom:0px"></div>
+                                    </div>
+                                </div>
+                                <div id="text-26" class="widget widget_text">
+                                    <div class="textwidget">
+                                        <div class="mkd_icon_list" style='margin-bottom: 0px;'>
+
+                                            <p class="mkd_icon_list_text "
+                                                style="color:#ffffff;font-size: 20px;font-family: 'GlacialIndifference-Regular';font-weight: 900;letter-spacing: 1px;">
+                                                C4V
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="text-4" class="widget widget_text">
+                                    <div class="textwidget">
+                                        <div class="separator  small left  "
+                                            style="border-color:  #D90E18;border-bottom-width:2px;width:35px;margin-top:13px;margin-bottom:20px;border-style: solid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="mkd_twitter_widget-2" class="widget widget_mkd_twitter_widget">
+                                    <p>Connect with your site visitor's on a personal level and make sure that your site
+                                        becomes a regular stop in their daily browsing.</p>
+                                </div>
+                                <div class="separator  transparent center  " style="margin-top:30px;margin-bottom:0px">
+                                </div>
+                                <span class="mkd_icon_shade mkd_icon_shortcode font_elegant circle  icon_linked  "
+                                    data-hover-background-color=#D90E18
+                                    style="background-color: rgba(255,255,255,0.06);border-width: 0px!important; border-style:solid;margin: 0 2px 2px 0;line-height:55px;width:55px;height:55px;">
+                                    <a href="index.html#" target="_blank"> <i class="fab fa-instagram"></i></a>
+                                </span><span
+                                    class="mkd_icon_shade mkd_icon_shortcode font_elegant circle  icon_linked  "
+                                    data-hover-background-color=#D90E18
+                                    style="background-color: rgba(255,255,255,0.06);border-width: 0px!important; border-style:solid;margin: 0 2px 2px 0;line-height:55px;width:55px;height:55px;">
+                                    <a href="index.html#" target="_blank"> <i class="fab fa-facebook"></i></a>
+                                </span><span
+                                    class="mkd_icon_shade mkd_icon_shortcode font_elegant circle  icon_linked  "
+                                    data-hover-background-color=#D90E18
+                                    style="background-color: rgba(255,255,255,0.06);border-width: 0px!important; border-style:solid;margin: 0 2px 2px 0;line-height:55px;width:55px;height:55px;"><a
+                                        href="https://www.linkedin.com/company/chargecccv/" target="_blank"> <i
+                                            class="fab fa-linkedin-in"></i></a></span><span
+                                    class="mkd_icon_shade mkd_icon_shortcode font_elegant circle  icon_linked  "
+                                    data-hover-background-color=#D90E18
+                                    style="background-color: rgba(255,255,255,0.06);border-width: 0px!important; border-style:solid;margin: 0 0 2px 0;line-height:55px;width:55px;height:55px;">
+                                    <a href="https://twitter.com/ChargeCCCV" target="_blank"> <i
+                                            class="fab fa-twitter"></a></i> </span>
+                            </div>
+                        </div>
+                        <div class="mkd_column column2">
+                            <div class="column_inner">
+                                <div id="text-3" class="widget widget_text">
+                                    <div class="textwidget">
+                                        <div class="separator  transparent center  "
+                                            style="margin-top:14px;margin-bottom:0px"></div>
+                                    </div>
+                                </div>
+                                <div id="text-26" class="widget widget_text">
+                                    <div class="textwidget">
+                                        <div class="mkd_icon_list" style='margin-bottom: 0px;'>
+
+                                            <p class="mkd_icon_list_text "
+                                                style="color:#ffffff;font-size: 13px;font-family: 'GlacialIndifference-Regular';font-weight: 900;letter-spacing: 1px;">
+                                                TWITTER FEED</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="text-4" class="widget widget_text">
+                                    <div class="textwidget">
+                                        <div class="separator  small left  "
+                                            style="border-color:  #D90E18;border-bottom-width:2px;width:35px;margin-top:13px;margin-bottom:20px;border-style: solid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="mkd_twitter_widget-2" class="widget widget_mkd_twitter_widget">
+                                    <ul class="mkd_twitter_widget">
+                                        <li>
+                                            <div class="mkd_tweet_text">
+                                                <a target="_blank" href="index.html#">@kingedeborg</a> <a target="_blank"
+                                                    href="index.html#">@Google</a> Hey, Thanks for writing in! Please submit a
+                                                ticket on our help center, and our agents will be… <a target="_blank"
+                                                    href="index.html#">https://t.co/EaiWOIGEmo</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="mkd_tweet_text">
+                                                <a target="_blank" href="index.html#">@aliasadadm</a> Hi <a target="_blank"
+                                                    href="index.html#">@aliasadadm</a> , can you please submit a ticket at <a
+                                                    target="_blank" href="index.html#">https://t.co/JLV61aXG7d</a> and
+                                                one of our support agent… <a target="_blank"
+                                                    href="index.html#">https://t.co/yk57k1S9bS</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mkd_column column3">
+                            <div class="column_inner">
+                                <div id="text-5" class="widget widget_text">
+                                    <div class="textwidget">
+                                        <div class="separator  transparent center  "
+                                            style="margin-top:12px;margin-bottom:0px"></div>
+                                    </div>
+                                </div>
+                                <div id="text-6" class="widget widget_text">
+                                    <h4>From Our Blog</h4>
+                                    <div class="textwidget">
+                                        <div class="separator  small left  "
+                                            style="border-color:  #D90E18;border-bottom-width:2px;width:35px;margin-top:12px;margin-bottom:9px;border-style: solid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="nav_menu-3" class="widget widget_nav_menu">
+                                    <div class="menu-footer_third_column-container">
+                                        <ul id="menu-footer_third_column" class="menu">
+                                            <li id="menu-item-6083"
+                                                class="menu-item menu-item-type-post_type menu-item-object-post menu-item-6083">
+                                                <a href="index.html#">Enter the World of Web
+                                                    Design</a>
+                                            </li>
+                                            <li id="menu-item-6085"
+                                                class="menu-item menu-item-type-post_type menu-item-object-post menu-item-6085">
+                                                <a href="index.html#">Exploring Graffiti
+                                                    Art</a>
+                                            </li>
+                                            <li id="menu-item-6086"
+                                                class="menu-item menu-item-type-post_type menu-item-object-post menu-item-6086">
+                                                <a href="index.html#">Developing
+                                                    Friendships at Work</a>
+                                            </li>
+                                            <li id="menu-item-6087"
+                                                class="menu-item menu-item-type-post_type menu-item-object-post menu-item-6087">
+                                                <a href="index.html#">15 Best Blogs to
+                                                    Follow This Summer</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mkd_column column4">
+                            <div class="column_inner">
+                                <div id="text-7" class="widget widget_text">
+                                    <div class="textwidget">
+                                        <div class="separator  transparent center  "
+                                            style="margin-top:12px;margin-bottom:0px"></div>
+                                    </div>
+                                </div>
+                                <div id="text-8" class="widget widget_text">
+                                    <h4>Contact Us </h4>
+                                    <div class="textwidget">
+                                        <div class="separator  small left  "
+                                            style="border-color:  #D90E18;border-bottom-width:2px;width:35px;margin-top:12px;margin-bottom:9px;border-style: solid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="nav_menu-4" class="widget widget_nav_menu">
+                                    <div class="menu-footer_fourth_column-container">
+                                        <form action="index.html">
+                                            <ul id="menu-footer_fourth_column" class="menu">
+
+                                                <li id="menu-item-6097"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-portfolio_page menu-item-6097">
+                                                    <input class="comman" type="text" placeholder="Name"
+                                                        style=" width:80%;height:34px;">
+                                                </li>
+
+                                                <li id="menu-item-6098"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-portfolio_page menu-item-6098"
+                                                    style="width:100%">
+                                                    <input class="comman" type="email" placeholder="Email"
+                                                        style="width:80%;height: 34px;">
+                                                <li>
+
+                                                    <input class="comman" type="Mobile" placeholder="Mobile No."
+                                                        style="width:80%;height:34px;">
+                                                </li>
+
+                                                </li>
+                                                <li id="menu-item-6099"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-portfolio_page menu-item-6099">
+                                                    <textarea class="comman" name="" id="" cols="22"
+                                                        placeholder="Message" rows="5" style="width:80%;"></textarea>
+                                                </li>
+
+                                                <li id="menu-item-6098"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-portfolio_page menu-item-6098">
+                                                    <a href="index.html#">Captcha</a>
+                                                </li>
+                                                <li id="menu-item-6098"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-portfolio_page menu-item-6098">
+                                                    <input class="comman" type="captcha" style="width:80%;height:64px;">
+                                                </li>
+                                                <li id="menu-item-6101"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-portfolio_page menu-item-6101"
+                                                    style="padding-top: 20px;">
+                                                    <a href="index.html#" target="_self" data-hover-background-color="#D90E18"
+                                                        data-hover-color="white" class="qbutton  icon_right"
+                                                        style="color:#ffffff; border: 1px solid #D90E18; font-size: 15px; line-height: 43px; height: 43px; font-style: normal; font-weight: 900; padding-left: 26px; padding-right: 26px; border-radius: 10px; background-color: black;">Submit</a>
+                                                </li>
+                                            </ul>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bottom_holder">
+                <div class="footer_bottom_holder_inner">
+                    <div class="column_inner">
+                        <div class="menu-side_area_menu-container text-white">
+                            <h6>&#169;Copyright c4v All Rights Reserved</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+    </div>
+    <div class="rbt-toolbar" data-theme="C4V" data-featu#D90E18="" data-button-position="25%"
+        data-button-horizontal="right" data-button-alt="no"></div>
+    </script>
+    <script src="wp-content/cache/minify/867b4.js"></script>
+    <script src="wp-content/cache/minify/a070d.js"></script>
+
+   
+
+   
+    <script>
+        // $(function () {
+        //     $("#footer").load("footer.html");
+        //     $("#header").load("header.html");
+        // });
+    </script>
+    <script>
+        var counter = 1;
+        setInterval(function () {
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if (counter > 4) {
+                counter = 1;
+            }
+        }, 5000);
+    </script>
+
+<script>
+   let videos = [
+    "./mobVideo.mp4",
+    "./mobVideo.mp4", 
+    "./C4V_Website.mp4"
+  ]
+
+  function setVideoWithScreen(screen, element){
+      console.log(window.innerWidth)
+    element.setAttribute("type", "video/mp4");
+    if(window.innerWidth < 700){
+      element.removeAttribute("src");
+      element.setAttribute("src", videos[0]);
+    //   element.load();
+    }else if(window.innerWidth < 1000){
+      element.removeAttribute("src");
+      element.setAttribute("src", videos[1]);
+    //   element.load();
+    }else{
+        element.removeAttribute("src");
+      element.setAttribute("src", videos[2]);
+    //   element.load();
+    }
+  }
+
+  let el = document.getElementsByClassName('video')
+  for (i = 0; i < el.length; i++) {
+    setVideoWithScreen(700, el[i])
+  }
+
+  window.addEventListener("resize", function() {
+    let el = document.getElementsByClassName('video')
+    for (i = 0; i < el.length; i++) {
+      setVideoWithScreen(1000, el[i])
+    }
+
+  })
+
+
+  window.onload = function(e){ 
+    
+    var modal = document.getElementById("myModal");
+    var img = document.getElementById("myImg");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    
+    var span = document.getElementById("parkingModal");
+    function parking(){
+      modal.style.display = "block";
+      modalImg.src = "Parking details.jpg";
+    }
+
+    function flyin() {
+        modal.style.display = "block";
+      modalImg.src = "flyin.jpeg";
+    }
+    
+    
+
+    function parkingClose() { 
+      modal.style.display = "none";
+    }
+    window.parking = parking;
+    window.parkingClose = parkingClose;
+   
+}
+</script>
+
+</body>
+</html>

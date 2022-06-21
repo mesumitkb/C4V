@@ -1,0 +1,2072 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>C4V</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="wp-content/cache/minify/4ad3e.css" media="all" />
+    <script src="wp-content/cache/minify/98076.js"></script>
+    <script src="https://kit.fontawesome.com/8014d266b1.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="wp-content/cache/minify/style.css">
+    <link href="https://www.1001fonts.com/glacial-indifference-font.html?size=36" rel="stylesheet">
+    <link href="https://c4v.website.appneural.net/wp-content/fonts/glacial-indifference/GlacialIndifference-Regular.otf">
+    <link rel="stylesheet" href="wp-content/fonts/GlacialIndifference-Regular.otf">
+    <link rel="stylesheet" href="wp-content/fonts/GlacialIndifference-Regular.otf">
+
+    <style>
+        @font-face {
+            font-family: "GlacialIndifference-Regular";
+            src: url(../../fonts/GlacialIndifference-Regular.otf);
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .bgv-btn {
+            font-family: 'GlacialIndifference-Regular';
+            z-index: 1;
+            position: absolute;
+            top: 80%;
+            left: 45%;
+            color: black;
+            border-width: 0px;
+            font-size: 16px;
+            line-height: 43px;
+            height: 43px;
+            font-style: normal;
+            font-weight: bolder;
+            padding-left: 26px;
+            padding-right: 26px;
+            border-radius: 80px;
+            background-color: white;
+        }
+
+
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: rgba(17, 17, 17, 0.707);
+            border-radius: 18px 18px 0px 0px;
+        }
+
+        .container:hover .overlay {
+            opacity: 1;
+        }
+
+        .text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        /* Fixed sidenav, full height */
+
+        .sidenav {
+            background-color: #81818184;
+            height: 100%;
+            width: 100px;
+            position: fixed;
+            z-index: 1;
+            background-color: #111;
+            overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+            padding-top: 200px;
+        }
+
+        /* Style the sidenav links and the dropdown button */
+
+        .sidenav a,
+        .dropdown-btn {
+            font-family: 'GlacialIndifference-Regular';
+            padding: 23px 0px 30px 15px;
+            text-decoration: none;
+            font-size: 30px;
+            color: #818181;
+            display: inline-block;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+        }
+
+        /* On mouse-over */
+
+        .sidenav a:hover,
+        .dropdown-btn:hover {
+            color: #ff0000;
+        }
+
+        .side2 {
+            color: #fff !important;
+            font-weight: 400;
+            text-decoration: capitalize;
+            display: inline-block;
+            position: relative;
+            line-height: 40px;
+            padding: 0;
+            margin: 0;
+            cursor: pointer
+        }
+
+        .side {
+            padding: 100px;
+        }
+
+        /* Main content */
+
+        .main {
+            font-family: 'GlacialIndifference-Regular';
+            margin-left: 200px;
+            /* Same as the width of the sidenav */
+            font-size: 20px;
+            /* Increased text to enable scrolling */
+            padding: 0px 10px;
+        }
+
+        /* Add an active class to the active dropdown button */
+
+        .active {
+            color: #ff0000;
+        }
+
+        /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+
+        .dropdown-container {
+            display: none;
+            padding-left: 60px;
+        }
+
+        .side1:hover .dropdown-container {
+            display: block;
+        }
+
+        dropdown-btn .side1:hover .dropdown-container {
+            display: block;
+        }
+
+        /* Optional: Style the caret down icon */
+
+        .fa-caret-down {
+            padding-right: 8px;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        #h1 {
+            color: white;
+        }
+
+        /* Bottom right text */
+
+        .text-block {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: black;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .sidenav {
+            font-family: 'GlacialIndifference-Regular';
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 2;
+            top: 0;
+            right: 0;
+            background-color: rgb(0, 0, 0);
+            transition: 0.5s;
+            padding-bottom: 100px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .back {
+            height: 0;
+            width: 100%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: rgb(255, 255, 255);
+            opacity: 0.2;
+            overflow-y: hidden;
+            transition: 0.5s;
+            padding-top: 0px;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 8%;
+            left: 86%;
+            font-size: 65px;
+            margin-left: 50px;
+        }
+
+        .sidenav a {
+            font-size: 22px;
+        }
+/* 
+        #bg-video {
+            min-width: 100%;
+            min-height: 100vh;
+            max-width: 100%;
+            max-height: 100vh;
+            object-fit: cover;
+            z-index: -1;
+        } */
+
+
+        /*=== Trigger  ===*/
+
+        .animate {
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+        /*=== Optional Delays, change values here  ===*/
+
+        .one {
+            -webkit-animation-delay: 0.5s;
+            -moz-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+        }
+
+        .two {
+            -webkit-animation-delay: 1.5s;
+            -moz-animation-delay: 1.5s;
+            animation-delay: 1.5s;
+        }
+
+        .three {
+            -webkit-animation-delay: 2.5s;
+            -moz-animation-delay: 2.5s;
+            animation-delay: 2.5s;
+        }
+
+        .four {
+            -webkit-animation-delay: 3.5s;
+            -moz-animation-delay: 3.5s;
+            animation-delay: 3.5s;
+        }
+
+        .five {
+            -webkit-animation-delay: 4.5s;
+            -moz-animation-delay: 4.5s;
+            animation-delay: 4.5s;
+        }
+
+        .six {
+            -webkit-animation-delay: 5.5s;
+            -moz-animation-delay: 5.5s;
+            animation-delay: 5.5s;
+        }
+
+        .seven {
+            -webkit-animation-delay: 6.5s;
+            -moz-animation-delay: 6.5s;
+            animation-delay: 6.5s;
+        }
+
+        .eight {
+            -webkit-animation-delay: 7.5s;
+            -moz-animation-delay: 7.5s;
+            animation-delay: 7.5s;
+        }
+
+        /*=== Animations start here  ===*/
+        /*==== FADE IN UP ===*/
+
+        @-webkit-keyframes fadeInUp {
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(0, 100%, 0);
+                transform: translate3d(0, 100%, 0);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(0, 100%, 0);
+                transform: translate3d(0, 100%, 0);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        .fadeInUp {
+            -webkit-animation-name: fadeInUp;
+            animation-name: fadeInUp;
+        }
+
+        /*=== FADE IN DOWN ===*/
+
+        .fadeInDown {
+            -webkit-animation-name: fadeInDown;
+            animation-name: fadeInDown;
+        }
+
+        @-webkit-keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(0, -100%, 0);
+                transform: translate3d(0, -100%, 0);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(0, -100%, 0);
+                transform: translate3d(0, -100%, 0);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        /*=== FADE IN LEFT ===*/
+
+        @-webkit-keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(-100%, 0, 0);
+                transform: translate3d(-100%, 0, 0);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(-100%, 0, 0);
+                transform: translate3d(-100%, 0, 0);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        .fadeInLeft {
+            -webkit-animation-name: fadeInLeft;
+            animation-name: fadeInLeft;
+        }
+
+        /*==== FADE IN RIGHT ===*/
+
+        @-webkit-keyframes fadeInRight {
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(100%, 0, 0);
+                transform: translate3d(100%, 0, 0);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(100%, 0, 0);
+                transform: translate3d(100%, 0, 0);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        .fadeInRight {
+            -webkit-animation-name: fadeInRight;
+            animation-name: fadeInRight;
+        }
+
+        /*=== FADE IN  ===*/
+
+        @-webkit-keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fadeIn {
+            -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+        }
+
+        /*=== FADE IN UP Big ===*/
+
+        .fadeInUpBig {
+            -webkit-animation-name: fadeInUpBig;
+            animation-name: fadeInUpBig;
+        }
+
+        @-webkit-keyframes fadeInUpBig {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(0, 2000px, 0);
+                transform: translate3d(0, 2000px, 0);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        @keyframes fadeInUpBig {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(0, 2000px, 0);
+                transform: translate3d(0, 2000px, 0);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        /*=== FADE IN DOWN Big ===*/
+
+        .fadeInDownBig {
+            -webkit-animation-name: fadeInDownBig;
+            animation-name: fadeInDownBig;
+        }
+
+        @-webkit-keyframes fadeInDownBig {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(0, -2000px, 0);
+                transform: translate3d(0, -2000px, 0);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        @keyframes fadeInDownBig {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(0, -2000px, 0);
+                transform: translate3d(0, -2000px, 0);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        /*=== FADE IN LEFT Big ===*/
+
+        .fadeInLeftBig {
+            -webkit-animation-name: fadeInLeftBig;
+            animation-name: fadeInLeftBig;
+        }
+
+        @-webkit-keyframes fadeInLeftBig {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(-2000px, 0, 0);
+                transform: translate3d(-2000px, 0, 0);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        @keyframes fadeInLeftBig {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(-2000px, 0, 0);
+                transform: translate3d(-2000px, 0, 0);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        /*=== FADE IN RIGHT Big ===*/
+
+        .fadeInRightBig {
+            -webkit-animation-name: fadeInRightBig;
+            animation-name: fadeInRightBig;
+        }
+
+        @-webkit-keyframes fadeInRightBig {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(2000px, 0, 0);
+                transform: translate3d(2000px, 0, 0);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        @keyframes fadeInRightBig {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(2000px, 0, 0);
+                transform: translate3d(2000px, 0, 0);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        .comman {
+            background-color: black;
+            color: white;
+            border-bottom: 1px solid red;
+            border-top-style: hidden;
+            border-right-style: hidden;
+            border-left-style: hidden;
+            margin-top: 5%;
+            font-family: 'GlacialIndifference-Regular';
+        }
+
+        .comman::placeholder {
+            color: #d5d8dc;
+
+        }
+    </style>
+</head>
+
+<body onscroll="scrollFunction()"
+    class="home page-template page-template-full_width page-template-full_width-php page page-id-6057 mkd-core-1.0 ajax_fade page_not_loaded  C4V-ver-1.0  vertical_menu_with_scroll smooth_scroll woocommerce_installed blog_installed wpb-js-composer js-comp-ver-6.0.5 vc_responsive">
+
+    <div class="wrapper">
+        <div class="wrapper_inner">
+            <header
+                class="page_header scrolled_not_transparent with_border has_top scroll_top  with_hover_bg_color fixed ajax_header_animation header_one_scroll_resize">
+                <div class="header_inner clearfix">
+                    <div class="header_top_bottom_holder">
+
+                        <div class="header_bottom  header_in_grid clearfix "
+                            style="background-color:rgba(0, 0, 0, 0.2);">
+                            <div class="container">
+                                <div class="container_inner clearfix"
+                                    style="    display: flex; justify-content: flex-end; align-items: center;">
+                                    <div class="header_inner_left">
+                                        <div class="mobile_menu_button">
+                                            <span>
+                                                <span aria-hidden="true" class="fas fa-bars"></span> </span>
+                                        </div>
+                                        <div class="logo_wrapper">
+                                            <div class="mkd_logo">
+                                                <a href="c4v_website_appneural_default.html#" id="companyLogo">
+                                                    <img class="normal companylogo" style="left:200px;" src="logo.png"
+                                                        alt="Logo" />
+
+                                                    <img class="mobile companylogo" src="logo1.png" alt="Logo" /></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <nav class="main_menu drop_down  slide_from_bottom right"
+                                        style="margin-right:174px">
+                                        <ul id="menu-main_menu" class="">
+                                            <li id="nav-menu-item-4694"
+                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub narrow">
+                                                <a href="index.html" class=" no_link" style="cursor: default;"
+                                                    onclick="JavaScript: return false;"><span class="item_inner"><span
+                                                            class="menu_icon_wrapper"><i
+                                                                class="menu_icon null fa"></i></span><span
+                                                            class="item_text">Home</span></span><span
+                                                        class="plus"></span></a>
+                                                <div class="second">
+                                                    <div class="inner" style="width: 100%;">
+                                                        <ul style="width: 100%;justify-content: center;">
+                                                            <li id="nav-menu-item-4699"
+                                                                class="menu-item menu-item-type-post_type menu-item-object-page ">
+                                                                <a href="Electrification.html" class=""><span
+                                                                        class="item_inner"><span
+                                                                            class="menu_icon_wrapper"><i
+                                                                                class="menu_icon null fa"></i></span><span
+                                                                            class="item_text">Electrification</span></span><span
+                                                                        class="plus"></span></a>
+                                                            </li>
+                                                            <li id="nav-menu-item-10192"
+                                                                class="menu-item menu-item-type-custom menu-item-object-custom ">
+                                                                <a target="_blank" href="Electrification.html"
+                                                                    class=""><span class="item_inner"><span
+                                                                            class="item_text">Energy
+                                                                            Storage</span></span>
+                                                                </a>
+                                                            </li>
+                                                            <li id="nav-menu-item-4702"
+                                                                class="menu-item menu-item-type-post_type menu-item-object-page ">
+                                                                <a href="Electrification.html" class=""><span
+                                                                        class="item_inner"><span
+                                                                            class="menu_icon_wrapper"><i
+                                                                                class="menu_icon null fa"></i></span><span
+                                                                            class="item_text">Li-ion Batteries
+                                                                        </span></span><span class="plus"></span></a>
+                                                            </li>
+                                                            <li id="nav-menu-item-4702"
+                                                                class="menu-item menu-item-type-post_type menu-item-object-page ">
+                                                                <a href="Electrification.html" class=""><span
+                                                                        class="item_inner"><span
+                                                                            class="menu_icon_wrapper"><i
+                                                                                class="menu_icon null fa"></i></span><span
+                                                                            class="item_text">Gigafactory
+                                                                        </span></span><span class="plus"></span></a>
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+
+                                            <li id="nav-menu-item-4694"
+                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub narrow">
+                                                <a href="c4v_website_appneural_default.html#" class=" no_link"
+                                                    style="cursor: default;"><span class="item_inner"><span
+                                                            class="menu_icon_wrapper"><i
+                                                                class="menu_icon null fa"></i></span><span
+                                                            class="item_text">Technology</span></span><span
+                                                        class="plus"></span></a>
+                                                <div class="second">
+                                                    <div class="inner" style="width: 100%;">
+                                                        <ul style="width: 100%;justify-content: center;">
+                                                            <li id="nav-menu-item-4699"
+                                                                class="menu-item menu-item-type-post_type menu-item-object-page ">
+                                                                <a href="Technology.html" class=""><span
+                                                                        class="item_inner"><span
+                                                                            class="menu_icon_wrapper"><i
+                                                                                class="menu_icon null fa"></i></span><span
+                                                                            class="item_text">Innovation</span></span><span
+                                                                        class="plus"></span></a>
+                                                            </li>
+                                                            <li id="nav-menu-item-10192"
+                                                                class="menu-item menu-item-type-custom menu-item-object-custom ">
+                                                                <a target="_blank" href="portfolio.html" class=""><span
+                                                                        class="item_inner"><span class="item_text">IP
+                                                                            Portfolio</span></span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="nav-menu-item-4694"
+                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub narrow">
+                                                <a href="https://c4v.website.appneural.net/partnership.html" class=" no_link"
+                                                    style="cursor: default;"><span class="item_inner"><span
+                                                            class="menu_icon_wrapper"><i
+                                                                class="menu_icon null fa"></i></span><span
+                                                            class="item_text">Partnerships</span></span><span
+                                                        class="plus"></span></a>
+                                                <div class="second">
+                                                    <div class="inner" style="width: 100%;">
+                                                        <ul style="width: 100%;justify-content: center;">
+                                                            <li id="nav-menu-item-4699"
+                                                                class="menu-item menu-item-type-post_type menu-item-object-page ">
+                                                                <a href="https://c4v.website.appneural.net/partnership.html" class=""><span
+                                                                        class="item_inner"><span
+                                                                            class="menu_icon_wrapper"><i
+                                                                                class="menu_icon null fa"></i></span><span
+                                                                            class="item_text">Gigafactory</span></span><span
+                                                                        class="plus"></span></a>
+                                                            </li>
+                                                            <li id="nav-menu-item-10192"
+                                                                class="menu-item menu-item-type-custom menu-item-object-custom ">
+                                                                <a target="_blank" href="https://c4v.website.appneural.net/partnership.html"
+                                                                    class=""><span class="item_inner"><span
+                                                                            class="item_text">Offtake</span></span>
+                                                                </a>
+                                                            </li>
+                                                            <li id="nav-menu-item-4702"
+                                                                class="menu-item menu-item-type-post_type menu-item-object-page ">
+                                                                <a href="https://c4v.website.appneural.net/partnership.html" class=""><span
+                                                                        class="item_inner"><span
+                                                                            class="menu_icon_wrapper"><i
+                                                                                class="menu_icon null fa"></i></span><span
+                                                                            class="item_text">Development
+                                                                        </span></span><span class="plus"></span></a>
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="nav-menu-item-10090"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page  narrow">
+                                                <a href="contact.html"><span class="item_inner"><span
+                                                            class="menu_icon_wrapper"><i
+                                                                class="menu_icon null fa"></i></span><span
+                                                            class="item_text">Contact</span></span><span
+                                                        class="plus"></span></a>
+                                            </li>
+                                            <li id="nav-menu-item-10090"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page  narrow">
+                                                <a href="c4v_website_appneural_default.html# " onclick="openNav();"><span class="item_inner"><span
+                                                            class="menu_icon_wrapper"><i
+                                                                class="menu_icon null fa"></i></span><span
+                                                            class="item_text">&#9776;</span></span><span
+                                                        class="plus"></span></a>
+                                            </li>
+                                            <li>
+                                                <div id="mySidenav" class="sidenav " style="margin-bottom: 200px;">
+                                                    <a href="javascript:void(0)" class="closebtn"
+                                                        onclick="closeNav()">&times;</a>
+                                                    <div
+                                                        style="font-size: 50px ;height: 300px;width: 360px; margin-top: -4%;margin-right:100px;margin-left: 250px; justify-self: right; ">
+                                                        <div class="side1">
+                                                            <a href="index.html"> <button class="dropdown-btn">Home
+                                                                    <i class="fa fa-caret-down"></i>
+                                                                </button></a>
+                                                            <div class="dropdown-container side2">
+                                                                <a href="Electrification.html">Electrification</a>
+                                                                <a href="Electrification.html">Energy Storage</a>
+                                                                <a href="Electrification.html">Li-ion Batteries</a>
+                                                                <a href="Electrification.html">Gigafactory </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="side1">
+                                                            <button class="dropdown-btn">Solutions
+                                                                <i class="fa fa-caret-down"></i>
+                                                            </button>
+                                                            <div class="dropdown-container side2">
+                                                                <a href="solution.html">Electric Mobility </a>
+                                                                <a href="solution.html">Aviation</a>
+                                                                <a href="solution.html">Grid Storage</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="side1">
+                                                            <button class="dropdown-btn"> Partnerships
+                                                                <i class="fa fa-caret-down"></i>
+                                                            </button>
+                                                            <div class="dropdown-container side2">
+                                                                <a href="Partnerships.html">Gigafactory</a>
+                                                                <a href="Partnerships.html">Offtake</a>
+                                                                <a href="Partnerships.html">Development</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div style=" height: 64%; width: 500px;margin-top: -4%;">
+                                                        <div class="side1">
+                                                            <button class="dropdown-btn">Technology
+                                                                <i class="fa fa-caret-down"></i>
+                                                            </button>
+                                                            <div class="dropdown-container side2">
+                                                                <a href="Technology.html">Innovation</a>
+                                                                <a href="portfolio.html">IP Portfolio</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="side1">
+                                                            <button class="dropdown-btn">Media
+                                                                <i class="fa fa-caret-down"></i>
+                                                            </button>
+                                                            <div class="dropdown-container side2">
+                                                                <a href="media.html">Social Media</a>
+                                                                <a href="blog.html">Blog</a>
+                                                                <a href="press.html">Press Releases</a>
+                                                            </div>
+                                                        </div>
+                                                        <a href="team.html">
+                                                            <div class="side1">
+                                                                <button class="dropdown-btn"> Team
+                                                                </button>
+                                                            </div>
+                                                        </a>
+                                                        <button class="dropdown-btn">Contact
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <span class="mobile_arrow"></span>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                    <!--mobile nav -->
+                                    <nav class="mobile_menu">
+                                        <ul id="menu-main_menu-1" class="">
+                                            <li id="mobile-menu-item-6439"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-6057 current_page_item current-menu-ancestor current_page_ancestor menu-item-has-children active has_sub level0">
+                                                <a href="index.html" class=" current "><span>Home</span></a><span
+                                                    class="mobile_arrow"><i class="fa fa-angle-right"></i><i
+                                                        class="fa fa-angle-down"></i></span>
+                                                <ul class="sub_menu">
+                                                    <li id="mobile-menu-item-5643"
+                                                        class="menu-item menu-item-type-post_type menu-item-object-page  level2">
+                                                        <a href="Electrification.html" class=""><span>
+                                                                Electrification</span></a><span class="mobile_arrow"><i
+                                                                class="fa fa-angle-right"></i></span>
+                                                    </li>
+                                                    <li id="mobile-menu-item-5642"
+                                                        class="menu-item menu-item-type-post_type menu-item-object-page  level2">
+                                                        <a href="c4v_website_appneural_default.html#" class=""><span>Energy Storage</span></a><span
+                                                            class="mobile_arrow"><i
+                                                                class="fa fa-angle-right"></i></span>
+                                                    </li>
+                                                    <li id="mobile-menu-item-5643"
+                                                        class="menu-item menu-item-type-post_type menu-item-object-page  level2">
+                                                        <a href="c4v_website_appneural_default.html#" class=""><span>Li-ion Batteries</span></a><span
+                                                            class="mobile_arrow"><i
+                                                                class="fa fa-angle-right"></i></span>
+                                                    </li>
+                                                    <li id="mobile-menu-item-5642"
+                                                        class="menu-item menu-item-type-post_type menu-item-object-page  level2">
+                                                        <a href="c4v_website_appneural_default.html#" class=""><span>Gigafactory</span></a><span
+                                                            class="mobile_arrow"><i
+                                                                class="fa fa-angle-right"></i></span>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li id="mobile-menu-item-12"
+                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children has_sub level0">
+                                                <a href="c4v_website_appneural_default.html#" class=" current "><span>Technology</span></a><span
+                                                    class="mobile_arrow"><i class="fa fa-angle-right"></i><i
+                                                        class="fa fa-angle-down"></i></span>
+                                                <ul class="sub_menu">
+                                                    <li id="mobile-menu-item-5643"
+                                                        class="menu-item menu-item-type-post_type menu-item-object-page  level2">
+                                                        <a href="Technology.html" class=""><span>Innovation</span></a><span
+                                                            class="mobile_arrow"><i
+                                                                class="fa fa-angle-right"></i></span>
+                                                    </li>
+                                                    <li id="mobile-menu-item-5642"
+                                                        class="menu-item menu-item-type-post_type menu-item-object-page  level2">
+                                                        <a href="portfolio.html" class=""><span>IP Portfolio</span></a><span
+                                                            class="mobile_arrow"><i
+                                                                class="fa fa-angle-right"></i></span>
+                                                    </li>
+
+                                                </ul>
+                                            </li>
+                                            <li id="mobile-menu-item-12"
+                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children has_sub level0">
+                                                <a href="c4v_website_appneural_default.html#" class=" current "><span>partnership
+                                                    </span></a><span class="mobile_arrow"><i
+                                                        class="fa fa-angle-right"></i><i
+                                                        class="fa fa-angle-down"></i></span>
+                                                <ul class="sub_menu">
+                                                    <li id="mobile-menu-item-5643"
+                                                        class="menu-item menu-item-type-post_type menu-item-object-page  level2">
+                                                        <a href="c4v_website_appneural_default.html#" class=""><span>Gigafactory</span></a><span
+                                                            class="mobile_arrow"><i
+                                                                class="fa fa-angle-right"></i></span>
+                                                    </li>
+                                                    <li id="mobile-menu-item-5642"
+                                                        class="menu-item menu-item-type-post_type menu-item-object-page  level2">
+                                                        <a href="c4v_website_appneural_default.html#" class=""><span>Offtake</span></a><span
+                                                            class="mobile_arrow"><i
+                                                                class="fa fa-angle-right"></i></span>
+                                                    </li>
+                                                    <li id="mobile-menu-item-5643"
+                                                        class="menu-item menu-item-type-post_type menu-item-object-page  level2">
+                                                        <a href="c4v_website_appneural_default.html#" class=""><span>Development</span></a><span
+                                                            class="mobile_arrow"><i
+                                                                class="fa fa-angle-right"></i></span>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li id="mobile-menu-item-12"
+                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children has_sub level0">
+                                                <a href="c4v_website_appneural_default.html#" class=" current "><span>Solutions</span></a><span
+                                                    class="mobile_arrow"><i class="fa fa-angle-right"></i><i
+                                                        class="fa fa-angle-down"></i></span>
+                                                <ul class="sub_menu">
+                                                    <li id="mobile-menu-item-5643"
+                                                        class="menu-item menu-item-type-post_type menu-item-object-page  level2">
+                                                        <a href="c4v_website_appneural_default.html#" class=""><span>Electric Mobility</span></a><span
+                                                            class="mobile_arrow"><i
+                                                                class="fa fa-angle-right"></i></span>
+                                                    </li>
+                                                    <li id="mobile-menu-item-5642"
+                                                        class="menu-item menu-item-type-post_type menu-item-object-page  level2">
+                                                        <a href="c4v_website_appneural_default.html#" class=""><span>Aviation</span></a><span
+                                                            class="mobile_arrow"><i
+                                                                class="fa fa-angle-right"></i></span>
+                                                    </li>
+                                                    <li id="mobile-menu-item-5643"
+                                                        class="menu-item menu-item-type-post_type menu-item-object-page  level2">
+                                                        <a href="c4v_website_appneural_default.html#" class=""><span>Grid Storage</span></a><span
+                                                            class="mobile_arrow"><i
+                                                                class="fa fa-angle-right"></i></span>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li id="mobile-menu-item-12"
+                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children has_sub level0">
+                                                <a href="c4v_website_appneural_default.html#" class=" current "><span>Media</span></a><span
+                                                    class="mobile_arrow"><i class="fa fa-angle-right"></i><i
+                                                        class="fa fa-angle-down"></i></span>
+                                                <ul class="sub_menu">
+                                                    <li id="mobile-menu-item-5643"
+                                                        class="menu-item menu-item-type-post_type menu-item-object-page  level2">
+                                                        <a href="c4v_website_appneural_default.html#" class=""><span>Social Media</span></a><span
+                                                            class="mobile_arrow"><i
+                                                                class="fa fa-angle-right"></i></span>
+                                                    </li>
+                                                    <li id="mobile-menu-item-5642"
+                                                        class="menu-item menu-item-type-post_type menu-item-object-page  level2">
+                                                        <a href="c4v_website_appneural_default.html#" class=""><span>Blog</span></a><span
+                                                            class="mobile_arrow"><i
+                                                                class="fa fa-angle-right"></i></span>
+                                                    </li>
+                                                    <li id="mobile-menu-item-5643"
+                                                        class="menu-item menu-item-type-post_type menu-item-object-page  level2">
+                                                        <a href="press.html" class=""><span>Press Releases</span></a><span
+                                                            class="mobile_arrow"><i
+                                                                class="fa fa-angle-right"></i></span>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li id="mobile-menu-item-10090"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page  level0">
+                                                <a href="c4v_website_appneural_default.html#" class=""><span>Team</span></a><span class="mobile_arrow"><i
+                                                        class="fa fa-angle-right"></i><i
+                                                        class="fa fa-angle-down"></i></span>
+                                            </li>
+                                            <li id="mobile-menu-item-10090"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page  level0">
+                                                <a href="c4v_website_appneural_default.html#" class=""><span>Contact</span></a><span
+                                                    class="mobile_arrow"><i class="fa fa-angle-right"></i><i
+                                                        class="fa fa-angle-down"></i></span>
+                                            </li>
+                                        </ul>
+
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <a id='back_to_top' class="" href='c4v_website_appneural_default.html#'>
+                <span class="mkd_icon_stack">
+                    <i class="fas fa-arrow-circle-up"></i>
+                </span>
+            </a>
+            <div class="content ">
+                <div class="content_inner  ">
+                    <script>
+                        page_scroll_amount_for_sticky = undefined
+                    </script>
+                    <div class="full_width">
+                        <div class="full_width_inner" style="padding-top:0px !important">
+                            <section id="overflow-adj" data-mkd_id="#home" data-speed="1"
+                                class="parallax_section_holder    ">
+                                <a href="c4v_website_appneural_default.html#transfer">
+
+                                    <a href="c4v_website_appneural_default.html#transfer" target="_self" data-hover-background-color="#D90E18"
+                                        data-hover-color="#fff" class="qbutton  icon_right bgv-btn ">Explore now</a>
+
+
+
+
+                                </a>
+                                <div class="">
+                                    <video class="video" width="100%" height="100%" autoplay muted>
+                                        <source src="./C4V_Website.mp4" type="video/mp4">
+                                        <source src="./C4V_Website.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                      </video>
+                                </div>
+                                <div class="parallax_content center  parallax_full_section_inner">
+                                    <div class='parallax_section_inner_margin clearfix'>
+                                        <div class="wpb_column vc_column_container vc_col-sm-12">
+                                            <div class="vc_column-inner">
+                                                <div class="wpb_wrapper">
+                                                    <div
+                                                        class='mkd_elements_holder one_column responsive_mode_from_768'>
+                                                        <div class='mkd_elements_item vertical_alignment_bottom horizontal_align_center '
+                                                            data-animation='no'>
+                                                            <div class='mkd_elements_item_inner'>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div style="display: flex;background-color: gainsboro;" id="transfer">
+                    <div style="width: 44%;display: flex;justify-content: center;align-items: center;">
+                        <p
+                            style="height: auto;width: 70%;font-size: 30px;line-height: 32px;font-family: 'GlacialIndifference-Regular';">
+                            C4V launches its latest cell technology
+                            platform LiSER (Lithium Slim Energy Reserve)
+                        </p>
+                    </div>
+                    <div style="width: 56%;height: 400px;">
+                        <img src="images/P01.jpg" alt="" width="150%" height="auto">
+                    </div>
+                </div>
+                <div class="full_width">
+                    <div class="full_width_inner" style="padding-top:0px !important">
+
+                        <div class="vc_row wpb_row section grid_section animate fadeInUp ones"
+                            style='padding-top:130px; padding-bottom:25px; text-align:center;'>
+                            <div class=" section_inner clearfix">
+                                <div class='section_inner_margin clearfix'>
+                                    <div class="wpb_column vc_column_container vc_col-sm-12">
+                                        <div class="vc_column-inner">
+                                            <div class="wpb_wrapper">
+                                                <div class="mkd_separator_with_icon with_icon  center "
+                                                    style="margin-top:35px;margin-bottom:45px">
+                                                    <div class="mkd_icon_holder" style="bottom:-19px;">
+                                                        <div class="mkd_separator_icon_holder">
+                                                            <div class="mkd_line_before"
+                                                                style="border-color: #d5d8dc;border-bottom-width:1px;width:118px;border-style: solid;margin-bottom:-0.5px;margin-right:18px;">
+                                                            </div>
+                                                            <img src="images/Picture1.png" width="50%" height="50%">
+
+                                                            <div class="mkd_line_after"
+                                                                style="border-color: #d5d8dc;border-bottom-width:1px;width:118px;border-style: solid;margin-bottom:-0.5px;margin-left:18px;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="wpb_text_column wpb_content_element ">
+                                                    <div class="wpb_wrapper ">
+                                                        <h3>“Charging Ahead!” in relentless pursuit of the perfect
+                                                            energy storage solution
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                                <div class="separator  transparent   "
+                                                    style="margin-top:18px;margin-bottom:0px">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- slider start -->
+
+                        <div class="mainslider">
+                            <div class="sliderr">
+                                <div class="slidee">
+                                    <input type="radio" name="radio-btn" id="radio1">
+                                    <input type="radio" name="radio-btn" id="radio2">
+                                    <input type="radio" name="radio-btn" id="radio3">
+                                    <input type="radio" name="radio-btn" id="radio4">
+                                    <div class="slide first">
+                                        <p>
+
+                                            Innovation is in our DNA with a strong belief
+                                            that no new technology is truly innovative
+                                            unless it can be cost effectively translated to
+                                            the factory floor and produced at mass scale. <br><br><br>
+                                            <a href="c4v_website_appneural_default.html#" target="_self" data-hover-animated-background-color="#D90E18"
+                                                data-hover-border-color="#D90E18" data-hover-color="#ffffff"
+                                                class="qbutton  fill_from_bottom icon_right"
+                                                style="color: rgb(71, 76, 78); border-color: rgb(199, 201, 202); border-width: 1px; font-size: 13px; line-height: 53px; height: 53px; font-style: normal; font-weight: 900; border-radius: 0px; background-color: rgb(255, 255, 255);"><span
+                                                    class="text_wrap" data-text="Explore now" style="">Explore
+                                                    now</span><span class="a_overlay"
+                                                    style="border-radius: 0px; background-color: rgb(71, 76, 78);"></span></a>
+                                        </p>
+                                        <img src="images/s1.jpeg" alt="">
+                                    </div>
+                                    <div class="slide">
+                                        <p>Sustainability is one of
+                                            the keystones of our entire platform and the
+                                            reason we even exist. All of our technologies
+                                            are rigorously developed to minimize carbon
+                                            footprint with a premium
+                                            on environmentally friendly materials and
+                                            processes resulting in net positive impacts on
+                                            the Global Ecosystem.
+                                            <br><br><br>
+                                            <a href="c4v_website_appneural_default.html#" target="_self" data-hover-animated-background-color="#D90E18"
+                                                data-hover-border-color="#D90E18" data-hover-color="#ffffff"
+                                                class="qbutton  fill_from_bottom icon_right"
+                                                style="color: rgb(71, 76, 78); border-color: rgb(199, 201, 202); border-width: 1px; font-size: 13px; line-height: 53px; height: 53px; font-style: normal; font-weight: 900; border-radius: 0px; background-color: rgb(255, 255, 255);"><span
+                                                    class="text_wrap" data-text="Explore now" style="">Explore
+                                                    now</span><span class="a_overlay"
+                                                    style="border-radius: 0px; background-color: rgb(71, 76, 78);"></span></a>
+
+                                        </p>
+                                        <img src="images/P12.jpg" alt="">
+                                    </div>
+                                    <div class="slide">
+                                        <p>
+                                            The World’s transition
+                                            to electrification promises fundamental energy
+                                            transformation on a global scale. These
+                                            Lithium-ion battery industry clusters, focused
+                                            on Cell Gigafactories, support
+                                            Energy Security and local availability of Cells
+                                            and allow any jurisdiction to participate in a
+                                            brand new, future proofed, advanced
+                                            manufacturing project that serves as an
+                                            extremely
+                                            powerful and unprecedented engine for economic
+                                            development.
+                                            <br><br><br>
+                                            <a href="c4v_website_appneural_default.html#" target="_self" data-hover-animated-background-color="#D90E18"
+                                                data-hover-border-color="#D90E18" data-hover-color="#ffffff"
+                                                class="qbutton  fill_from_bottom icon_right"
+                                                style="color: rgb(71, 76, 78); border-color: rgb(199, 201, 202); border-width: 1px; font-size: 13px; line-height: 53px; height: 53px; font-style: normal; font-weight: 900; border-radius: 0px; background-color: rgb(255, 255, 255);"><span
+                                                    class="text_wrap" data-text="Explore now" style="">Explore
+                                                    now</span><span class="a_overlay"
+                                                    style="border-radius: 0px; background-color: rgb(71, 76, 78);"></span></a>
+
+                                        </p>
+                                        <img src="images/s3.jpeg" alt="">
+                                    </div>
+                                    <div class="slide">
+                                        <p>
+                                            Our breakthrough
+                                            composition of matter Patents power innovations
+                                            linking molecules to machines resulting in
+                                            superior battery performance including options
+                                            for Nickel and Cobalt chemistries
+                                            that are safer, more energy dense and longer
+                                            lasting than rival Technologies.
+                                            <br><br><br>
+                                            <a href="c4v_website_appneural_default.html#" target="_self" data-hover-animated-background-color="#D90E18"
+                                                data-hover-border-color="#D90E18" data-hover-color="#ffffff"
+                                                class="qbutton  fill_from_bottom icon_right"
+                                                style="color: rgb(71, 76, 78); border-color: rgb(199, 201, 202); border-width: 1px; font-size: 13px; line-height: 53px; height: 53px; font-style: normal; font-weight: 900; border-radius: 0px; background-color: rgb(255, 255, 255);"><span
+                                                    class="text_wrap" data-text="Explore now">Explore
+                                                    now</span><span class="a_overlay"
+                                                    style="border-radius: 0px; background-color: rgb(71, 76, 78);"></span></a>
+
+                                        </p>
+                                        <img src="images/P14.jpg" alt="">
+                                    </div>
+                                    <div class="navigation-auto">
+                                        <div class="auto-btn1"></div>
+                                        <div class="auto-btn2"></div>
+                                        <div class="auto-btn3"></div>
+                                        <div class="auto-btn4"></div>
+                                    </div>
+                                </div>
+                                <div class="navigation-manual">
+                                    <label for="radio1" class="manual-btn"></label>
+                                    <label for="radio2" class="manual-btn"></label>
+                                    <label for="radio3" class="manual-btn"></label>
+                                    <label for="radio4" class="manual-btn"></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- slider end -->
+
+                        <!--perllex-->
+                        <div
+                            style="width: auto; height: auto; background-color: #fff;position: absolute ; top: 1500px; right: 100px;z-index: 99;">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/RQGmUtV18Oc?controls=0"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <section data-speed="1" class="parallax_section_holder   parallax_grid_section  "
+                            style=" min-height:690px; height: auto; ">
+                            <div class="parallax_section_holder_background zoom_effect"
+                                style="background-image: url(&quot;images/P03.jpeg&quot;); transform: matrix(1.4, 0, 0, 1.4, 0, 0) rotate(0.01deg); background-position: 50% 140px;">
+                            </div>
+                            <div class="parallax_content center  parallax_section_inner">
+
+                            </div>
+                        </section>
+                        <!--perllex-->
+                        <br />
+
+                        <div class="vc_row wpb_row section grid_section animate fadeInUp ones"
+                            style='padding-top:130px; padding-bottom:25px; text-align:center;'>
+                            <div class=" section_inner clearfix">
+                                <div class='section_inner_margin clearfix'>
+                                    <div class="wpb_column vc_column_container vc_col-sm-12">
+                                        <div class="vc_column-inner">
+                                            <div class="wpb_wrapper">
+                                                <div class="mkd_separator_with_icon with_icon  center "
+                                                    style="margin-top:35px;margin-bottom:45px">
+                                                    <div class="mkd_icon_holder" style="bottom:-19px;">
+                                                        <div class="mkd_separator_icon_holder">
+                                                            <div class="mkd_line_before"
+                                                                style="border-color: #d5d8dc;border-bottom-width:1px;width:118px;border-style: solid;margin-bottom:-0.5px;margin-right:18px;">
+                                                            </div>
+                                                            <img src="images/Picture1.png" width="50%" height="50%">
+
+                                                            <div class="mkd_line_after"
+                                                                style="border-color: #d5d8dc;border-bottom-width:1px;width:118px;border-style: solid;margin-bottom:-0.5px;margin-left:18px;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="wpb_text_column wpb_content_element ">
+                                                    <div class="wpb_wrapper ">
+                                                        <h3>C4V: connecting molecules to machines driving the future of
+                                                            Energy Storage Technology and Manufacturing
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                                <div class="separator  transparent   "
+                                                    style="margin-top:18px;margin-bottom:0px">
+                                                </div>
+                                                <div class="wpb_text_column wpb_content_element ">
+                                                    <div class="wpb_wrapper">
+                                                        <h5>With our clear Vision into the entire Lithium-Ion Battery
+                                                            Value Chain, C4V has a unique perspective for both what is
+                                                            Probable and, most importantly, what Energy Storage makes
+                                                            Possible.
+                                                        </h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vc_row wpb_row section grid_section"
+                            style=' padding-top:60px; text-align:center;padding-bottom: 55px;'>
+                            <div class=" section_inner clearfix">
+                                <div class='section_inner_margin clearfix'>
+                                    <div
+                                        class="wpb_column vc_column_container vc_col-sm-12 vc_col-md-offset-0 vc_col-md-12">
+                                        <div class="vc_column-inner">
+                                            <div class="wpb_wrapper">
+
+                                                <div class="image_stack" style="height: 500px;">
+                                                    <div class="slide_out_image_holder ">
+                                                        <div class="image image_2of3 inner container"
+                                                            style="background-image: url(images/project/slider2/2.jpg); -webkit-border-radius: 18px 18px 0 0; border-radius: 18px 18px 0 0;;">
+                                                            <div class="overlay">
+                                                                <div class="text">P-Series</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="image hero image_1of3 container"
+                                                            style="background-image: url(images/project/slider2/3.jpg); -webkit-border-radius: 18px 18px 0 0; border-radius: 18px 18px 0 0;;">
+                                                            <div class="overlay">
+                                                                <div class="text">N-Series</div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="image image_3of3 inner container"
+                                                            style="background-image: url(images/project/slider2/4.jpg); -webkit-border-radius: 18px 18px 0 0; border-radius: 18px 18px 0 0;;">
+                                                            <div class="overlay">
+                                                                <div class="text">S-Series</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="vc_row wpb_row section" style=' text-align:left;'>
+                        <div class=" full_section_inner clearfix">
+                            <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-offset-0">
+                                <div class="vc_column-inner">
+                                    <div class="wpb_wrapper">
+                                        <div class="call_to_action normal"
+                                            style="background-color: #283033;border: 1px solid #283033;">
+                                            <div class="container_inner">
+                                                <div class="call_to_action_row_75_25 clearfix"
+                                                    style="padding: 27px 70px 28px 70px;">
+                                                    <div class="text_wrapper to_action_column1 to_action_cell">
+                                                        <div class="call_to_action_text">
+                                                            <h5 style="font-size: 19px;"><span
+                                                                    style="color: #ffffff;">Innovation at work: C4V’s
+                                                                    LiSER cell design technology creates a revolutionary
+                                                                    new platform for Lithium-Ion Battery Storage.
+                                                                </span>
+                                                            </h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="button_wrapper to_action_column2 to_action_cell left"
+                                                        style="text-align: right"><a href="c4v_website_appneural_default.html#"
+                                                            class="qbutton  fill_from_bottom" target="_self"
+                                                            style="color: #ffffff;border-width: 0px;background-color: #4a5255;padding-left: 20px;padding-right: 33px;"
+                                                            data-hover-color='#283033'
+                                                            data-button-icon-hover-color=' #D90E18'
+                                                            data-hover-animated-background-color=#ffffff><span
+                                                                aria-hidden="true" class=""
+                                                                style="color:  #D90E18;font-size: 17px;"></span><span
+                                                                class="call_to_action_button_text text_wrap">Explore
+                                                                Now</span><span class="a_overlay"></span></a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- portfolio -->
+                    <div class="vc_row wpb_row section grid_section"
+                        style=' padding-top:50px; padding-bottom:25px; text-align:center;'>
+                        <div class=" section_inner clearfix">
+                            <div class='section_inner_margin clearfix'>
+                                <div class="wpb_column vc_column_container vc_col-sm-12">
+                                    <div class="vc_column-inner">
+                                        <div class="wpb_wrapper">
+                                            <div class="mkd_separator_with_icon with_icon  center "
+                                                style="margin-top:35px;margin-bottom:45px">
+                                                <div class="mkd_icon_holder" style="bottom:-19px;">
+                                                    <div class="mkd_separator_icon_holder">
+                                                        <div class="mkd_line_before"
+                                                            style="border-color: #d5d8dc;border-bottom-width:1px;width:118px;border-style: solid;margin-bottom:-0.5px;margin-right:18px;">
+                                                        </div>
+                                                        <img src="images/Picture1.png" width="50%" height="50%">
+
+                                                        <div class="mkd_line_after"
+                                                            style="border-color: #d5d8dc;border-bottom-width:1px;width:118px;border-style: solid;margin-bottom:-0.5px;margin-left:18px;">
+                                                            <div class="mkd_line_after"
+                                                                style="border-color: #d5d8dc;border-bottom-width:1px;width:118px;border-style: solid;margin-bottom:-0.5px;margin-left:18px;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="wpb_text_column wpb_content_element ">
+                                                    <div class="wpb_wrapper" style="padding-top:43px;">
+                                                        <h2>Energy storage solutions that seamlessly support our daily
+                                                            lives, enable the possible and power our imaginations
+                                                        </h2>
+                                                    </div>
+                                                </div>
+                                                <div class="separator  transparent   "
+                                                    style="margin-top:25px;margin-bottom:0px">
+                                                </div>
+                                                <div class="wpb_text_column wpb_content_element ">
+                                                    <div class="wpb_wrapper">
+                                                        <h5>With endless possibilities ahead, what energy storage uses
+                                                            do you see changing our world for the better.
+                                                        </h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vc_row wpb_row section grid_section" style=' text-align:center;'>
+                            <div class=" section_inner clearfix">
+                                <div class='section_inner_margin clearfix' style="padding-top:234px">
+                                    <div class="wpb_column vc_column_container vc_col-sm-4">
+                                        <div class="vc_column-inner">
+                                            <div class="wpb_wrapper">
+                                                <div class="mkd_image_with_text_and_icon undraw">
+                                                    <div class="box_image">
+                                                        <a href="c4v_website_appneural_default.html#">
+                                                            <div class="image_holder_inner">
+                                                                <img src="images/portfolio/P21.jpg"
+                                                                    alt="Electric Vehicles" />
+                                                                <div class="text-block">
+                                                                    <h4 id="h1">Electric Vehicles</h4>
+                                                                </div>
+                                                                <div class="borders">
+                                                                    <div class="border_1"></div>
+                                                                    <div class="border_2"></div>
+                                                                    <div class="border_3"></div>
+                                                                    <div class="border_4"></div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="separator  transparent   "
+                                                    style="margin-top:47px;margin-bottom:0px"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wpb_column vc_column_container vc_col-sm-4">
+                                        <div class="vc_column-inner">
+                                            <div class="wpb_wrapper">
+                                                <div class="mkd_image_with_text_and_icon undraw">
+                                                    <div class="box_image">
+                                                        <a href="c4v_website_appneural_default.html#">
+                                                            <div class="image_holder_inner"><img
+                                                                    src="images/portfolio/P22.jpeg" alt="E-Boats" />
+                                                                <div class="text-block">
+                                                                    <h4 id="h1">E-Boats</h4>
+                                                                </div>
+                                                                <div class="borders">
+                                                                    <div class="border_1"></div>
+                                                                    <div class="border_2"></div>
+                                                                    <div class="border_3"></div>
+                                                                    <div class="border_4"></div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="separator  transparent   "
+                                                    style="margin-top:47px;margin-bottom:0px"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wpb_column vc_column_container vc_col-sm-4">
+                                        <div class="vc_column-inner">
+                                            <div class="wpb_wrapper">
+                                                <div class="mkd_image_with_text_and_icon undraw">
+                                                    <div class="box_image">
+                                                        <a href="c4v_website_appneural_default.html#">
+                                                            <div class="image_holder_inner"><img
+                                                                    src="images/portfolio/P23.jpeg" alt="E-Trucks" />
+                                                                <div class="text-block">
+                                                                    <h4 id="h1">E-Trucks</h4>
+                                                                </div>
+                                                                <div class="borders">
+                                                                    <div class="border_1"></div>
+                                                                    <div class="border_2"></div>
+                                                                    <div class="border_3"></div>
+                                                                    <div class="border_4"></div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="separator  transparent   "
+                                                    style="margin-top:47px;margin-bottom:0px"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vc_row wpb_row section grid_section"
+                            style=' padding-bottom:60px; text-align:center;'>
+                            <div class=" section_inner clearfix">
+                                <div class='section_inner_margin clearfix'>
+                                    <div class="wpb_column vc_column_container vc_col-sm-4">
+                                        <div class="vc_column-inner">
+                                            <div class="wpb_wrapper">
+                                                <div class="mkd_image_with_text_and_icon undraw">
+                                                    <div class="box_image">
+                                                        <a href="c4v_website_appneural_default.html#">
+                                                            <div class="image_holder_inner"><img
+                                                                    src="images/portfolio/P24.jpeg"
+                                                                    alt="Electric Flight" />
+                                                                <div class="text-block">
+                                                                    <h4 id="h1">Electric Aviation</h4>
+                                                                </div>
+                                                                <div class="borders">
+                                                                    <div class="border_1"></div>
+                                                                    <div class="border_2"></div>
+                                                                    <div class="border_3"></div>
+                                                                    <div class="border_4"></div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="separator  transparent   "
+                                                    style="margin-top:47px;margin-bottom:0px"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wpb_column vc_column_container vc_col-sm-4">
+                                        <div class="vc_column-inner">
+                                            <div class="wpb_wrapper">
+                                                <div class="mkd_image_with_text_and_icon undraw">
+                                                    <div class="box_image">
+                                                        <a href="c4v_website_appneural_default.html#">
+                                                            <div class="image_holder_inner"><img
+                                                                    src="images/portfolio/P25.jpg" alt="eVTOL" />
+                                                                <div class="text-block">
+                                                                    <h4 id="h1">eVTOL</h4>
+                                                                </div>
+                                                                <div class="borders">
+                                                                    <div class="border_1"></div>
+                                                                    <div class="border_2"></div>
+                                                                    <div class="border_3"></div>
+                                                                    <div class="border_4"></div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="separator  transparent   "
+                                                    style="margin-top:47px;margin-bottom:0px"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wpb_column vc_column_container vc_col-sm-4">
+                                        <div class="vc_column-inner">
+                                            <div class="wpb_wrapper">
+                                                <div class="mkd_image_with_text_and_icon undraw">
+                                                    <div class="box_image">
+                                                        <a href="c4v_website_appneural_default.html#">
+                                                            <div class="image_holder_inner"><img
+                                                                    src="images/portfolio/P26.jpg" alt="Satellites" />
+                                                                <div class="text-block">
+                                                                    <h4 id="h1">Space Craft</h4>
+                                                                </div>
+                                                                <div class="borders">
+                                                                    <div class="border_1"></div>
+                                                                    <div class="border_2"></div>
+                                                                    <div class="border_3"></div>
+                                                                    <div class="border_4"></div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="separator  transparent   "
+                                                    style="margin-top:47px;margin-bottom:0px"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="vc_row wpb_row section grid_section" style=' text-align:center;'>
+                                    <div class=" section_inner clearfix">
+                                        <div class='section_inner_margin clearfix'>
+                                            <div class="wpb_column vc_column_container vc_col-sm-4">
+                                                <div class="vc_column-inner">
+                                                    <div class="wpb_wrapper">
+                                                        <div class="mkd_image_with_text_and_icon undraw">
+                                                            <div class="box_image">
+                                                                <a href="c4v_website_appneural_default.html#">
+                                                                    <div class="image_holder_inner">
+                                                                        <img src="images/portfolio/P27.jpeg"
+                                                                            alt="Solar farms" />
+                                                                        <div class="text-block">
+                                                                            <h4 id="h1">Solar farms</h4>
+                                                                        </div>
+                                                                        <div class="borders">
+                                                                            <div class="border_1"></div>
+                                                                            <div class="border_2"></div>
+                                                                            <div class="border_3"></div>
+                                                                            <div class="border_4"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="separator  transparent   "
+                                                            style="margin-top:47px;margin-bottom:0px"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="wpb_column vc_column_container vc_col-sm-4">
+                                                <div class="vc_column-inner">
+                                                    <div class="wpb_wrapper">
+                                                        <div class="mkd_image_with_text_and_icon undraw">
+                                                            <div class="box_image">
+                                                                <a href="c4v_website_appneural_default.html#">
+                                                                    <div class="image_holder_inner"><img
+                                                                            src="images/portfolio/P28.jpg"
+                                                                            alt="Wind farms" />
+                                                                        <div class="text-block">
+                                                                            <h4 id="h1">Wind farms</h4>
+                                                                        </div>
+                                                                        <div class="borders">
+                                                                            <div class="border_1"></div>
+                                                                            <div class="border_2"></div>
+                                                                            <div class="border_3"></div>
+                                                                            <div class="border_4"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="separator  transparent   "
+                                                            style="margin-top:47px;margin-bottom:0px"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="wpb_column vc_column_container vc_col-sm-4">
+                                                <div class="vc_column-inner">
+                                                    <div class="wpb_wrapper">
+                                                        <div class="mkd_image_with_text_and_icon undraw">
+                                                            <div class="box_image">
+                                                                <a href="c4v_website_appneural_default.html#">
+                                                                    <div class="image_holder_inner"><img
+                                                                            src="images/portfolio/P29.jpg"
+                                                                            alt="Charging Infrastructure" />
+                                                                        <div class="text-block">
+                                                                            <h4 id="h1">Charging Infra</h4>
+                                                                        </div>
+                                                                        <div class="borders">
+                                                                            <div class="border_1"></div>
+                                                                            <div class="border_2"></div>
+                                                                            <div class="border_3"></div>
+                                                                            <div class="border_4"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="separator  transparent   "
+                                                            style="margin-top:47px;margin-bottom:0px"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- portfolio -->
+                </div>
+                <div class="vc_row wpb_row section grid_section" style=' padding-top:0px;  text-align:center;'>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="vc_row wpb_row section grid_section"
+        style='background-color: #111; padding-top:43px; padding-bottom:43px; text-align:center;'>
+        <div class=" section_inner clearfix">
+            <div class='section_inner_margin clearfix'>
+                <div class="wpb_column vc_column_container vc_col-sm-12">
+                    <div class="vc_column-inner">
+                        <div class="wpb_wrapper">
+                            <div class="wpb_text_column wpb_content_element ">
+                                <div class="wpb_wrapper">
+                                    <h5><span style="color: #ffffff;">C4V: Charging Ahead!
+                                        </span></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="">
+        <div class="footer_inner clearfix">
+            <div class="footer_top_holder">
+                <div class="footer_top footer_top_full">
+                    <div class="four_columns clearfix">
+
+                        <div class="mkd_column column1">
+                            <div class="column_inner">
+                                <div id="text-3" class="widget widget_text">
+                                    <div class="textwidget">
+                                        <div class="separator  transparent center  "
+                                            style="margin-top:14px;margin-bottom:0px"></div>
+                                    </div>
+                                </div>
+                                <div id="text-26" class="widget widget_text">
+                                    <div class="textwidget">
+                                        <div class="mkd_icon_list" style='margin-bottom: 0px;'>
+
+                                            <p class="mkd_icon_list_text "
+                                                style="color:#ffffff;font-size: 20px;font-family: 'GlacialIndifference-Regular';font-weight: 900;letter-spacing: 1px;">
+                                                C4V
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="text-4" class="widget widget_text">
+                                    <div class="textwidget">
+                                        <div class="separator  small left  "
+                                            style="border-color:  #D90E18;border-bottom-width:2px;width:35px;margin-top:13px;margin-bottom:20px;border-style: solid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="mkd_twitter_widget-2" class="widget widget_mkd_twitter_widget">
+                                    <p>Connect with your site visitor's on a personal level and make sure that your site
+                                        becomes a regular stop in their daily browsing.</p>
+                                </div>
+                                <div class="separator  transparent center  " style="margin-top:30px;margin-bottom:0px">
+                                </div>
+                                <span class="mkd_icon_shade mkd_icon_shortcode font_elegant circle  icon_linked  "
+                                    data-hover-background-color=#D90E18
+                                    style="background-color: rgba(255,255,255,0.06);border-width: 0px!important; border-style:solid;margin: 0 2px 2px 0;line-height:55px;width:55px;height:55px;">
+                                    <a href="c4v_website_appneural_default.html#" target="_blank"> <i class="fab fa-instagram"></i></a>
+                                </span><span
+                                    class="mkd_icon_shade mkd_icon_shortcode font_elegant circle  icon_linked  "
+                                    data-hover-background-color=#D90E18
+                                    style="background-color: rgba(255,255,255,0.06);border-width: 0px!important; border-style:solid;margin: 0 2px 2px 0;line-height:55px;width:55px;height:55px;">
+                                    <a href="c4v_website_appneural_default.html#" target="_blank"> <i class="fab fa-facebook"></i></a>
+                                </span><span
+                                    class="mkd_icon_shade mkd_icon_shortcode font_elegant circle  icon_linked  "
+                                    data-hover-background-color=#D90E18
+                                    style="background-color: rgba(255,255,255,0.06);border-width: 0px!important; border-style:solid;margin: 0 2px 2px 0;line-height:55px;width:55px;height:55px;"><a
+                                        href="https://www.linkedin.com/company/chargecccv/" target="_blank"> <i
+                                            class="fab fa-linkedin-in"></i></a></span><span
+                                    class="mkd_icon_shade mkd_icon_shortcode font_elegant circle  icon_linked  "
+                                    data-hover-background-color=#D90E18
+                                    style="background-color: rgba(255,255,255,0.06);border-width: 0px!important; border-style:solid;margin: 0 0 2px 0;line-height:55px;width:55px;height:55px;">
+                                    <a href="https://twitter.com/ChargeCCCV" target="_blank"> <i
+                                            class="fab fa-twitter"></a></i> </span>
+                            </div>
+                        </div>
+                        <div class="mkd_column column2">
+                            <div class="column_inner">
+                                <div id="text-3" class="widget widget_text">
+                                    <div class="textwidget">
+                                        <div class="separator  transparent center  "
+                                            style="margin-top:14px;margin-bottom:0px"></div>
+                                    </div>
+                                </div>
+                                <div id="text-26" class="widget widget_text">
+                                    <div class="textwidget">
+                                        <div class="mkd_icon_list" style='margin-bottom: 0px;'>
+
+                                            <p class="mkd_icon_list_text "
+                                                style="color:#ffffff;font-size: 13px;font-family: 'GlacialIndifference-Regular';font-weight: 900;letter-spacing: 1px;">
+                                                TWITTER FEED</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="text-4" class="widget widget_text">
+                                    <div class="textwidget">
+                                        <div class="separator  small left  "
+                                            style="border-color:  #D90E18;border-bottom-width:2px;width:35px;margin-top:13px;margin-bottom:20px;border-style: solid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="mkd_twitter_widget-2" class="widget widget_mkd_twitter_widget">
+                                    <ul class="mkd_twitter_widget">
+                                        <li>
+                                            <div class="mkd_tweet_text">
+                                                <a target="_blank" href="c4v_website_appneural_default.html#">@kingedeborg</a> <a target="_blank"
+                                                    href="c4v_website_appneural_default.html#">@Google</a> Hey, Thanks for writing in! Please submit a
+                                                ticket on our help center, and our agents will be… <a target="_blank"
+                                                    href="c4v_website_appneural_default.html#">https://t.co/EaiWOIGEmo</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="mkd_tweet_text">
+                                                <a target="_blank" href="c4v_website_appneural_default.html#">@aliasadadm</a> Hi <a target="_blank"
+                                                    href="c4v_website_appneural_default.html#">@aliasadadm</a> , can you please submit a ticket at <a
+                                                    target="_blank" href="https://c4v.website.appneural.net/c4v_website_appneural_default.html#">https://t.co/JLV61aXG7d</a> and
+                                                one of our support agent… <a target="_blank"
+                                                    href="https://c4v.website.appneural.net/c4v_website_appneural_default.html#">https://t.co/yk57k1S9bS</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mkd_column column3">
+                            <div class="column_inner">
+                                <div id="text-5" class="widget widget_text">
+                                    <div class="textwidget">
+                                        <div class="separator  transparent center  "
+                                            style="margin-top:12px;margin-bottom:0px"></div>
+                                    </div>
+                                </div>
+                                <div id="text-6" class="widget widget_text">
+                                    <h4>From Our Blog</h4>
+                                    <div class="textwidget">
+                                        <div class="separator  small left  "
+                                            style="border-color:  #D90E18;border-bottom-width:2px;width:35px;margin-top:12px;margin-bottom:9px;border-style: solid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="nav_menu-3" class="widget widget_nav_menu">
+                                    <div class="menu-footer_third_column-container">
+                                        <ul id="menu-footer_third_column" class="menu">
+                                            <li id="menu-item-6083"
+                                                class="menu-item menu-item-type-post_type menu-item-object-post menu-item-6083">
+                                                <a href="https://c4v.website.appneural.net/c4v_website_appneural_default.html#">Enter the World of Web
+                                                    Design</a>
+                                            </li>
+                                            <li id="menu-item-6085"
+                                                class="menu-item menu-item-type-post_type menu-item-object-post menu-item-6085">
+                                                <a href="https://c4v.website.appneural.net/c4v_website_appneural_default.html#">Exploring Graffiti
+                                                    Art</a>
+                                            </li>
+                                            <li id="menu-item-6086"
+                                                class="menu-item menu-item-type-post_type menu-item-object-post menu-item-6086">
+                                                <a href="https://c4v.website.appneural.net/c4v_website_appneural_default.html#">Developing
+                                                    Friendships at Work</a>
+                                            </li>
+                                            <li id="menu-item-6087"
+                                                class="menu-item menu-item-type-post_type menu-item-object-post menu-item-6087">
+                                                <a href="https://c4v.website.appneural.net/c4v_website_appneural_default.html#">15 Best Blogs to
+                                                    Follow This Summer</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mkd_column column4">
+                            <div class="column_inner">
+                                <div id="text-7" class="widget widget_text">
+                                    <div class="textwidget">
+                                        <div class="separator  transparent center  "
+                                            style="margin-top:12px;margin-bottom:0px"></div>
+                                    </div>
+                                </div>
+                                <div id="text-8" class="widget widget_text">
+                                    <h4>Contact Us </h4>
+                                    <div class="textwidget">
+                                        <div class="separator  small left  "
+                                            style="border-color:  #D90E18;border-bottom-width:2px;width:35px;margin-top:12px;margin-bottom:9px;border-style: solid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="nav_menu-4" class="widget widget_nav_menu">
+                                    <div class="menu-footer_fourth_column-container">
+                                        <form action="https://c4v.website.appneural.net/c4v_website_appneural_default.html">
+                                            <ul id="menu-footer_fourth_column" class="menu">
+
+                                                <li id="menu-item-6097"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-portfolio_page menu-item-6097">
+                                                    <input class="comman" type="text" placeholder="Name"
+                                                        style=" width:80%;height:34px;">
+                                                </li>
+
+                                                <li id="menu-item-6098"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-portfolio_page menu-item-6098"
+                                                    style="width:100%">
+                                                    <input class="comman" type="email" placeholder="Email"
+                                                        style="width:80%;height: 34px;">
+                                                <li>
+
+                                                    <input class="comman" type="Mobile" placeholder="Mobile No."
+                                                        style="width:80%;height:34px;">
+                                                </li>
+
+                                                </li>
+                                                <li id="menu-item-6099"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-portfolio_page menu-item-6099">
+                                                    <textarea class="comman" name="" id="" cols="22"
+                                                        placeholder="Message" rows="5" style="width:80%;"></textarea>
+                                                </li>
+
+                                                <li id="menu-item-6098"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-portfolio_page menu-item-6098">
+                                                    <a href="https://c4v.website.appneural.net/c4v_website_appneural_default.html#">Captcha</a>
+                                                </li>
+                                                <li id="menu-item-6098"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-portfolio_page menu-item-6098">
+                                                    <input class="comman" type="captcha" style="width:80%;height:64px;">
+                                                </li>
+                                                <li id="menu-item-6101"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-portfolio_page menu-item-6101"
+                                                    style="padding-top: 20px;">
+                                                    <a href="https://c4v.website.appneural.net/c4v_website_appneural_default.html#" target="_self" data-hover-background-color="#D90E18"
+                                                        data-hover-color="white" class="qbutton  icon_right"
+                                                        style="color:#ffffff; border: 1px solid #D90E18; font-size: 15px; line-height: 43px; height: 43px; font-style: normal; font-weight: 900; padding-left: 26px; padding-right: 26px; border-radius: 10px; background-color: black;">Submit</a>
+                                                </li>
+                                            </ul>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bottom_holder">
+                <div class="footer_bottom_holder_inner">
+                    <div class="column_inner">
+                        <div class="menu-side_area_menu-container text-white">
+                            <h6>&#169;Copyright c4v All Rights Reserved</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+    </div>
+    <div class="rbt-toolbar" data-theme="C4V" data-featu#D90E18="" data-button-position="25%"
+        data-button-horizontal="right" data-button-alt="no"></div>
+    </script>
+    <script src="wp-content/cache/minify/867b4.js"></script>
+    <script src="wp-content/cache/minify/a070d.js"></script>
+
+    <script>
+    </script>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "100vw";
+            document.getElementById("background").style.height = "50%";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("background").style.height = "0%";
+        }
+
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            // console.log(document.documentElement.scrollTop)
+            var images = document.getElementsByClassName("companylogo");
+            // console.log(images)
+
+            for (let i = 0; i < images.length; i++) {
+                if (document.documentElement.scrollTop > 150)
+                    images[i].src =
+                        "logo.svg";
+
+
+                else
+                    images[i].src =
+                        "logo.png";
+
+            }
+        }
+    </script>
+
+    <script>
+        // $(function () {
+        //     $("#footer").load("footer.html");
+        //     $("#header").load("header.html");
+        // });
+    </script>
+    <script>
+        var counter = 1;
+        setInterval(function () {
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if (counter > 4) {
+                counter = 1;
+            }
+        }, 5000);
+    </script>
+
+<script>
+   let videos = [
+    "./mobVideo.mp4",
+    "./mobVideo.mp4", 
+    "./C4V_Website.mp4"
+  ]
+
+  function setVideoWithScreen(screen, element){
+      console.log(window.innerWidth)
+    element.setAttribute("type", "video/mp4");
+    if(window.innerWidth < 700){
+      element.removeAttribute("src");
+      element.setAttribute("src", videos[0]);
+    //   element.load();
+    }else if(window.innerWidth < 1000){
+      element.removeAttribute("src");
+      element.setAttribute("src", videos[1]);
+    //   element.load();
+    }else{
+        element.removeAttribute("src");
+      element.setAttribute("src", videos[2]);
+    //   element.load();
+    }
+  }
+
+  let el = document.getElementsByClassName('video')
+  for (i = 0; i < el.length; i++) {
+    setVideoWithScreen(700, el[i])
+  }
+
+  window.addEventListener("resize", function() {
+    let el = document.getElementsByClassName('video')
+    for (i = 0; i < el.length; i++) {
+      setVideoWithScreen(1000, el[i])
+    }
+  })
+</script>
+
+</body>
+
+</html>
