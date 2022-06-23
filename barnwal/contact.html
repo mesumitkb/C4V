@@ -18,7 +18,7 @@
     <link href="https://c4v.website.appneural.net/wp-content/fonts/glacial-indifference/GlacialIndifference-Regular.otf">
     <link rel="stylesheet" href="wp-content/fonts/GlacialIndifference-Regular.otf"> -->
     <link rel="stylesheet" href="wp-content/fonts/GlacialIndifference-Regular.otf">
-    <link rel="stylesheet" href="/style/style.css" >
+    <link rel="stylesheet" href="./style/style.css" >
     <script>
         function initMap() {
                 var uluru = {lat: 42.0943526, lng: -75.9597858};
@@ -41,7 +41,7 @@
           flex-direction: row;
           justify-content: space-between;
           margin: 0 auto;
-          padding: 5em;
+          padding: 3em;
           position: relative;
          
         }
@@ -109,6 +109,7 @@
           text-align: center;
           width: 100%;
           padding: 2em 0;
+          max-width: 300px;
          /* padding: 0; */
         }
         
@@ -121,8 +122,6 @@
           
           padding:1.5em;
           font-size:22px;
-          /* line-height: 60px; */
-          border-radius: 50%;
           color: #fff;
           background-color: rgb(27,27,27);
           cursor: pointer; 
@@ -920,15 +919,15 @@
                         <span id="#parkingModal" href="Parking details.jpg" onclick="parking()" target="_self" data-hover-animated-background-color="#D90E18"
                         data-hover-border-color="#D90E18" data-hover-color="#ffffff"
                         class="qbutton  fill_from_bottom icon_right"
-                        style="color: rgb(71, 76, 78); border-color: rgb(199, 201, 202); border-width: 1px; font-size: 13px; line-height: 53px; height: 53px; font-style: normal; font-weight: 900; border-radius: 0px; background-color: rgb(255, 255, 255);"><span
+                        style="color: rgb(71, 76, 78); border-color: rgb(199, 201, 202); border-width: 1px; font-size: 13px; line-height: 53px; height: 53px; font-style: normal; font-weight: 900; border-radius: 0px; background-color: rgb(255, 255, 255);min-width: 80px;"><span
                             class="text_wrap" data-text="Explore now" ><i class="fa fa-car fa-lg"></i> Parking
                             </span><span class="a_overlay"
                             style="border-radius: 0px; background-color: rgb(71, 76, 78);"></span></span>
                  &nbsp;&nbsp;
-                <span id="#flyin" href="flyin.jpeg" onclick="flyin()" target="_self" data-hover-animated-background-color="#D90E18"
+                <span id="#flyinModal" href="flyin.jpeg" onclick="flyin()" target="_self" data-hover-animated-background-color="#D90E18"
                 data-hover-border-color="#D90E18" data-hover-color="#ffffff"
                 class="qbutton  fill_from_bottom icon_right"
-                style="color: rgb(71, 76, 78); border-color: rgb(199, 201, 202); border-width: 1px; font-size: 13px; line-height: 53px; height: 53px; font-style: normal; font-weight: 900; border-radius: 0px; background-color: rgb(255, 255, 255);"><span
+                style="color: rgb(71, 76, 78); border-color: rgb(199, 201, 202); border-width: 1px; font-size: 13px; line-height: 53px; height: 53px; font-style: normal; font-weight: 900; border-radius: 0px; background-color: rgb(255, 255, 255); min-width: 80px;"><span
                     class="text_wrap" data-text="Explore now" ><i class="fa fa-plane fa-lg"></i> Fly-in
                     </span><span class="a_overlay"
                     style="border-radius: 0px; background-color: rgb(71, 76, 78);"></span></span>
@@ -962,10 +961,7 @@
                                 </li>
                                 <li><a href="#" target="_blank" class="contact-icon">
                                   <i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                </li>
-                                <li><a href="#" target="_blank" class="contact-icon">
-                                  <i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                </li>       
+                                </li>     
                               </ul>
                         </div>
                     </div>
@@ -1255,6 +1251,7 @@
         // });
     </script>
     <script>
+        /* 
         var counter = 1;
         setInterval(function () {
             document.getElementById('radio' + counter).checked = true;
@@ -1263,6 +1260,7 @@
                 counter = 1;
             }
         }, 5000);
+        */
     </script>
 
 <script>
@@ -1311,7 +1309,9 @@
     var modalImg = document.getElementById("img01");
     var captionText = document.getElementById("caption");
     
-    var span = document.getElementById("parkingModal");
+   // var span = document.getElementById("parkingModal");
+    
+
     function parking(){
       modal.style.display = "block";
       modalImg.src = "Parking details.jpg";
@@ -1319,7 +1319,7 @@
 
     function flyin() {
         modal.style.display = "block";
-      modalImg.src = "flyin.jpeg";
+        modalImg.src = "flyin.jpeg";
     }
     
     
@@ -1328,6 +1328,7 @@
       modal.style.display = "none";
     }
     window.parking = parking;
+    window.flyin = flyin;
     window.parkingClose = parkingClose;
    
 }
